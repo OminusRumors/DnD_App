@@ -1,0 +1,24 @@
+c:\users\dazle\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.exe.config
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe.config
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.pdb
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Form1.resources
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Form2.resources
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Properties.Resources.resources
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.exe
+E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.pdb
+C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe.config
+C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.exe
+C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.pdb
+C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.exe.config
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.exe
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.pdb
+C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.exe
+C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.pdb
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
