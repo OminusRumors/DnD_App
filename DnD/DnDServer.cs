@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using DnD;
 
 namespace TCP
 {
@@ -34,7 +35,8 @@ namespace TCP
             this.control = control;
         }
 
-        public DnDServer(Control control, ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate, ClientMessageDelegate listener)
+        public DnDServer(Control control, ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
+            ClientMessageDelegate listener)
         {
             this.messageDelegate = listener;
             this.disconnectDelegate = disconnectDelegate;
