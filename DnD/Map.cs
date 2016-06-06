@@ -23,7 +23,7 @@ namespace DnD_App
 
         }
 
-        public Map(Dictionary<Character,Point> startPosition)
+        public Map(Dictionary<Character, Point> startPosition)
         {
             this.charPosition = startPosition;
         }
@@ -38,6 +38,13 @@ namespace DnD_App
         {
             Point point = charPosition.FirstOrDefault(t => t.Key == character).Value;
             return point;
+        }
+
+        public Point UpdatePosition(Character character, Point newPosition)
+        {
+            Character c = charPosition.First(t => t.Key == character).Key;
+            charPosition[c] = newPosition;
+            return newPosition;
         }
     }
 }

@@ -11,5 +11,29 @@ namespace DnD_App
         private int weapRange;
         private int weapCriticalChance;
         private int weapEffectiveStat;
+
+        public Weapon()
+        { }
+
+        public int WeapAttack
+        {
+            get { return weapAttack; }
+            set { weapAttack = value; }
+        }
+        public int WeapRange
+        {
+            get { return weapRange; }
+            set { weapRange = value; }
+        }
+        public int WeapCriticalChance
+        {
+            get { return weapCriticalChance; }
+            set { weapCriticalChance = value; }
+        }
+        public int WeapEffStat
+        {
+            get { return weapEffectiveStat; }
+            set { weapEffectiveStat = value; }
+        }
     }
 }

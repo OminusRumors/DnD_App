@@ -6,20 +6,20 @@ using System.Text;
 namespace DnD_App
 {
 
-   // enum Race { human, elf, orc }
+    // enum Race { human, elf, orc }
     public class Character
     {
-        
+
         private string charName;
         private int charHealth;
         private Weapon charWeapon;
-        private int[] charStats = new int[6];
+        private int[] charStats;
         //private Armor charArmor;
         //public List<Item> charInventory;
         //private Profession charProfession;
         //private Race charRace;
 
-        public Character(String _name,int[] stats,int armor, Weapon wpan)
+        public Character(String _name, int[] stats, int armor, Weapon wpan)
         {
             charName = _name;
             this.CharStats = stats;
@@ -27,13 +27,25 @@ namespace DnD_App
             this.charHealth = 50;
             this.CharArmor = armor;
             this.charWeapon = wpan;
-           
+            charStats = new int[6];
         }
 
 
-        public string CharName { get; set; }
-        public int CharHealth { get; set; }
-        public Weapon CharWeapon { get; set; }
+        public string CharName
+        {
+            get { return charName; }
+            set { charName = value; }
+        }
+        public int CharHealth
+        {
+            get { return charHealth; }
+            set { charHealth = value; }
+        }
+        public Weapon CharWeapon 
+        {
+            get { return charWeapon; }
+            set { charWeapon = value; }
+        }
         /// <summary>
         /// will take fields from the user(strength, dex,con,int,....)
         /// size of six;
@@ -42,6 +54,6 @@ namespace DnD_App
         public int CharArmor { get; set; }
         //public List<Item> CharInventory { get; set; }
         //public Profession CharProfession { get; set; }
-        
+
     }
 }
