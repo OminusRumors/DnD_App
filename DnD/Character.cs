@@ -14,8 +14,8 @@ namespace DnD_App
         private int charHealth;
         private Weapon charWeapon;
         private int[] charStats;
-        //private Armor charArmor;
-        //public List<Item> charInventory;
+        private int charMaxHealth;
+        private List<Item> charInventory;
         //private Profession charProfession;
         //private Race charRace;
 
@@ -23,13 +23,17 @@ namespace DnD_App
         {
             charName = _name;
             this.CharStats = stats;
-            //Will change later
-            this.charHealth = 50;
+            this.charHealth = 100;
             this.CharArmor = armor;
             this.charWeapon = wpan;
             charStats = new int[6];
         }
 
+        public List<Item> Inventory
+        {
+            get { return charInventory; }
+            set { charInventory = value; }
+        }
 
         public string CharName
         {
@@ -41,11 +45,21 @@ namespace DnD_App
             get { return charHealth; }
             set { charHealth = value; }
         }
-        public Weapon CharWeapon 
+        public int CharMaxHealth
+        {
+            get { return charMaxHealth; }
+            set { charMaxHealth = value; }
+        }
+        public Weapon CharWeapon
         {
             get { return charWeapon; }
             set { charWeapon = value; }
         }
+        public int GetDamage()
+        {
+            return charWeapon.WeapAttack + charStats[charWeapon.WeapEffStat];
+        }
+
         /// <summary>
         /// will take fields from the user(strength, dex,con,int,....)
         /// size of six;

@@ -9,6 +9,9 @@ namespace DnD_App
     {
         private int weapAttack;
         private int weapRange;
+        /// <summary>
+        /// Maximum of 10
+        /// </summary>
         private int weapCriticalChance;
         private int weapEffectiveStat;
 

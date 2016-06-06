@@ -12,9 +12,19 @@ namespace DnD_App
 
         public Item()
         {
-            itemName = "Healing potion";
-            itemEffect = "effect";
+
         }
-               
+        
+        public string ItemName
+        {
+            get { return itemName; }
+            set { itemName = value; }
+        }
+
+        public string ItemEffect
+        {
+            get { return itemEffect; }
+            set { itemEffect = value; }
+        }
     }
 }

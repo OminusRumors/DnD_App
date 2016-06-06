@@ -8,43 +8,19 @@ namespace DnD_App
 {
     public class Map
     {
-        private Dictionary<Character, Point> charPosition;
         //private List<Trap> trapPosition;
         private int[,] charSpawn;
-
-        public Dictionary<Character, Point> CharPosition
-        {
-            get { return charPosition; }
-            set { charPosition = value; }
-        }
+        private Dictionary<Trap, Point> trapPosList;
 
         public Map()
         {
 
         }
 
-        public Map(Dictionary<Character, Point> startPosition)
+        public Dictionary<Trap, Point> TrapPosList
         {
-            this.charPosition = startPosition;
-        }
-
-        public Character GetCharacter(Point point)
-        {
-            Character c = charPosition.FirstOrDefault(t => t.Value == point).Key;
-            return c;
-        }
-
-        public Point GetPoint(Character character)
-        {
-            Point point = charPosition.FirstOrDefault(t => t.Key == character).Value;
-            return point;
-        }
-
-        public Point UpdatePosition(Character character, Point newPosition)
-        {
-            Character c = charPosition.First(t => t.Key == character).Key;
-            charPosition[c] = newPosition;
-            return newPosition;
+            get { return trapPosList; }
+            set { trapPosList = value; }
         }
     }
 }

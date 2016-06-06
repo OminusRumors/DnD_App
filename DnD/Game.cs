@@ -13,12 +13,30 @@ namespace DnD
         Dictionary<Character, Point> charList;
         Map map;
         Dice dice;
+        int playerCounter;
 
         public Game(Dictionary<Character, Point> charPosList)
         {
             map = new Map();
             dice = new Dice();
             charList = charPosList;
+            playerCounter = 0;
+        }
+
+        public Character NextPlayer()
+        {
+            Character chara;
+            if (playerCounter < charList.Count)
+            {
+                chara = charList.ElementAt(playerCounter).Key;
+                playerCounter++;
+                return chara;
+            }
+            else
+            {
+                playerCounter = 0;
+                return charList.ElementAt(playerCounter).Key;
+            }
         }
 
         public Dictionary<Character, Point> CharList
@@ -39,6 +57,26 @@ namespace DnD
             return point;
         }
 
+        public bool DropItem(Character chara, Item item)
+        {
+            if (chara.Inventory.Contains(item))
+            {
+                chara.Inventory.Remove(item);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Updates a character's position.
+        /// No checks are done (will be implemented later).
+        /// </summary>
+        /// <param name="character">The moving character.</param>
+        /// <param name="newPosition">The new position of the character.</param>
+        /// <returns>The new position.</returns>
         public Point UpdateCharPosition(Character character, Point newPosition)
         {
             Character c = charList.First(t => t.Key == character).Key;
@@ -46,6 +84,14 @@ namespace DnD
             return newPosition;
         }
 
+        /// <summary>
+        /// Implements an attack between 2 characters.
+        /// Checks the range of weapons, evading chance and critical hits.
+        /// </summary>
+        /// <param name="attacker">The attacking character.</param>
+        /// <param name="defender">The defending character.</param>
+        /// <param name="diceSides">The sides of the dice.</param>
+        /// <returns>True if attack succeeds, false otherwise.</returns>
         public bool Attack(Character attacker, Character defender, int diceSides)
         {
             //check if within weapon range
@@ -63,6 +109,7 @@ namespace DnD
                         defender.CharHealth -= attacker.GetDamage() * 2;
                         return true;
                     }
+                    //else normal hit
                     else
                     {
                         defender.CharHealth -= attacker.GetDamage();
