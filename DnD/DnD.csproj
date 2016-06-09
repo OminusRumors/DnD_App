@@ -51,19 +51,38 @@
     <Compile Include="Dice.cs" />
     <Compile Include="Client\DnDClient.cs" />
     <Compile Include="DnDMessage.cs" />
+    <Compile Include="Forms\DMaft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DMaft.designer.cs">
+      <DependentUpon>DMaft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMpre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DMpre.designer.cs">
+      <DependentUpon>DMpre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerForm.designer.cs">
+      <DependentUpon>PlayerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="SaveLoad.cs" />
     <Compile Include="Server\DnDServer.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterForm.cs">
+    <Compile Include="Forms\CharacterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterForm.Designer.cs">
+    <Compile Include="Forms\CharacterForm.Designer.cs">
       <DependentUpon>CharacterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Map.cs" />
@@ -72,10 +91,19 @@
     <Compile Include="Server\ServerDelegates.cs" />
     <Compile Include="Trap.cs" />
     <Compile Include="Weapon.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\DMaft.resx">
+      <DependentUpon>DMaft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DMpre.resx">
+      <DependentUpon>DMpre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerForm.resx">
+      <DependentUpon>PlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterForm.resx">
+    <EmbeddedResource Include="Forms\CharacterForm.resx">
       <DependentUpon>CharacterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

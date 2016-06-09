@@ -876,7 +876,7 @@
             this.btnCancel.Text = "Cancel Character";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // CharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -889,8 +889,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "CharacterForm";
             this.Text = "Create Character";
+            this.Load += new System.EventHandler(this.CharacterForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

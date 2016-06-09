@@ -31,6 +31,8 @@ namespace DnD
             server = new DnDServer(this, serverdelegates.clientConnected, serverdelegates.clientDisconnected, serverdelegates.clientMessage);
             server.setLogDelegate(serverdelegates.handleServerLog);
             server.start();
+            CharacterForm f = new CharacterForm(server, client);
+            f.Show();
         }
 
 
@@ -53,8 +55,13 @@ namespace DnD
 
         private void btnCreateChar_Click(object sender, EventArgs e)
         {
-            CharacterForm f = new CharacterForm();
-            f.Show();
+            //CharacterForm f = new CharacterForm();
+            //f.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

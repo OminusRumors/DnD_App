@@ -11,12 +11,14 @@ namespace DnD
     class Game
     {
         Dictionary<Character, Point> charList;
+        ServerDelegates svDelegates;
         Map map;
         Dice dice;
         int playerCounter;
 
         public Game(Dictionary<Character, Point> charPosList)
         {
+            svDelegates = new ServerDelegates();
             map = new Map();
             dice = new Dice();
             charList = charPosList;

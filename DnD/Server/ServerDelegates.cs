@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DnD_App;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -10,9 +12,15 @@ namespace DnD
 {
     class ServerDelegates
     {
+        Game game = new Game();
         public ServerDelegates()
         {
 
+        }
+
+        public void StartServer(DnDServer server)
+        {
+            server.start();
         }
         public void clientConnected(Socket client)
         {
@@ -44,6 +52,13 @@ namespace DnD
             {
                 DnDMessage response = DnDMessage.createWithText(msg.Action + ": Invalid request\n");
                 client.Send(response.ToByteArray());
+            }
+            else if (action == "character_info")
+            {
+                Character c = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
+                game.CharList.Add(c, new Point());
+                DnDMessage resp = DnDMessage.createWithText("success");
+                client.Send(resp.ToByteArray());
             }
         }
 

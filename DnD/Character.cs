@@ -7,6 +7,7 @@ namespace DnD_App
 {
 
     // enum Race { human, elf, orc }
+    [Serializable]
     public class Character
     {
 
@@ -27,6 +28,12 @@ namespace DnD_App
             this.CharArmor = armor;
             this.charWeapon = wpan;
             charStats = new int[6];
+        }
+
+        public Character(string name, int health)
+        {
+            charName = name;
+            charHealth = health;
         }
 
         public List<Item> Inventory
@@ -58,6 +65,16 @@ namespace DnD_App
         public int GetDamage()
         {
             return charWeapon.WeapAttack + charStats[charWeapon.WeapEffStat];
+        }
+
+        public Dictionary<string, string> ToDictionary()
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            dict.Add("name", charName);
+            dict.Add("HP", charHealth.ToString());
+
+            return dict;
         }
 
         /// <summary>

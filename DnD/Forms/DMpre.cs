@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace DnD
 {
-    public partial class CharacterForm : Form
+    public partial class DM_Form : Form
     {
-        public CharacterForm()
+        public DM_Form()
         {
             InitializeComponent();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
