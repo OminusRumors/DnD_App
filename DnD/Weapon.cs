@@ -18,6 +18,14 @@ namespace DnD_App
         public Weapon()
         { }
 
+        public Weapon(int attack, int range, int critChance, int effStat)
+        {
+            this.weapAttack = attack;
+            this.weapRange = range;
+            this.weapCriticalChance = critChance;
+            this.weapEffectiveStat = effStat;
+        }
+
         public int WeapAttack
         {
             get { return weapAttack; }

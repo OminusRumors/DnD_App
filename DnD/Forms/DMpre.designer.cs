@@ -1,6 +1,6 @@
 ﻿namespace DnD
 {
-    partial class DM_Form
+    partial class DMpre
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DM_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DMpre));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             // 
             // lbHostIp
             // 
-            this.lbHostIp.Location = new System.Drawing.Point(568, 553);
+            this.lbHostIp.Location = new System.Drawing.Point(568, 550);
             this.lbHostIp.Name = "lbHostIp";
             this.lbHostIp.ReadOnly = true;
             this.lbHostIp.Size = new System.Drawing.Size(100, 20);
@@ -111,6 +111,7 @@
             this.btnStartGame.TabIndex = 9;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // btnPlaceHazards
             // 
@@ -147,6 +148,7 @@
             this.btnPlaceNPCs.TabIndex = 12;
             this.btnPlaceNPCs.Text = "Place NPCs";
             this.btnPlaceNPCs.UseVisualStyleBackColor = true;
+            this.btnPlaceNPCs.Click += new System.EventHandler(this.btnPlaceNPCs_Click);
             // 
             // btnRemoveNPCs
             // 
@@ -219,7 +221,6 @@
             this.btnAddHazard.TabIndex = 18;
             this.btnAddHazard.Text = "Add Hazard";
             this.btnAddHazard.UseVisualStyleBackColor = true;
-            this.btnAddHazard.Click += new System.EventHandler(this.button2_Click);
             // 
             // pbGameGrid
             // 
@@ -229,7 +230,7 @@
             this.pbGameGrid.TabIndex = 4;
             this.pbGameGrid.TabStop = false;
             // 
-            // DM_Form
+            // DMpre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,7 +254,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "DM_Form";
+            this.Name = "DMpre";
             this.Text = "Host";
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();
             this.ResumeLayout(false);

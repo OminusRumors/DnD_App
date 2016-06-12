@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DnD;
 
-namespace TCP
+namespace DnD
 {
     public class DnDServer
     {
@@ -33,6 +33,14 @@ namespace TCP
         public DnDServer(Control control)
         {
             this.control = control;
+        }
+
+        public DnDServer(Control control, ServerDelegates serverDelegates)
+        {
+            this.control = control;
+            this.messageDelegate = serverDelegates.clientMessage;
+            this.connectDelegate = serverDelegates.clientConnected;
+            this.disconnectDelegate = serverDelegates.clientDisconnected;
         }
 
         public DnDServer(Control control, ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
@@ -195,7 +203,7 @@ namespace TCP
             return ((IPEndPoint)(s.RemoteEndPoint)).Address.ToString();
         }
 
-        public static string GetLocalIPAddress()
+        public string GetLocalIPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (var ip in host.AddressList)

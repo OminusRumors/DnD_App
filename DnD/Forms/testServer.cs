@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TCP;
+using DnD;
 
 namespace DnD.Forms
 {
@@ -26,7 +26,7 @@ namespace DnD.Forms
 
         private void testServer_Load(object sender, EventArgs e)
         {
-            server = new DnDServer(this, serverdelegates.clientConnected, serverdelegates.clientDisconnected, serverdelegates.clientMessage);
+            server = new DnDServer(this, serverdelegates);
             server.setLogDelegate(serverdelegates.handleServerLog);
             server.start();
             Character c=new Character("george", 29);

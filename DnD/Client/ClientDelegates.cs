@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TCP;
+using DnD;
 
 namespace DnD
 {
@@ -13,7 +13,7 @@ namespace DnD
         public bool isClientConnected;
         private testForm testForm;
 
-        public ClientDelegates(testForm t)
+        public ClientDelegates()
         {
             testForm = t;
             this.isClientConnected = false;

@@ -1,6 +1,6 @@
 ﻿namespace DnD
 {
-    partial class Form4
+    partial class DMaft
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DMaft));
             this.lbSelectedInfo = new System.Windows.Forms.ListBox();
             this.lbTurnOrder = new System.Windows.Forms.ListBox();
             this.lbLog = new System.Windows.Forms.ListBox();
@@ -360,7 +360,7 @@
             this.pbGameGrid.TabIndex = 3;
             this.pbGameGrid.TabStop = false;
             // 
-            // Form4
+            // DMaft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -399,7 +399,7 @@
             this.Controls.Add(this.lbLog);
             this.Controls.Add(this.lbTurnOrder);
             this.Controls.Add(this.lbSelectedInfo);
-            this.Name = "Form4";
+            this.Name = "DMaft";
             this.Text = "Dungeon Master In-game";
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();
             this.ResumeLayout(false);

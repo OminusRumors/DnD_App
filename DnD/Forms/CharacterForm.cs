@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TCP;
+using DnD;
 
 namespace DnD
 {
@@ -18,10 +18,10 @@ namespace DnD
         {
             InitializeComponent();
             int [] skills=new int[6];
-            Character c = new Character("george", skills, 15, new Weapon());
+            //Character c = new Character("george", skills, 15, new Weapon());
 
-            DnDMessage msg = new DnDMessage("character_info", c.ToDictionary());
-            client.sendMessage(msg);
+            //DnDMessage msg = new DnDMessage("character_info", c.ToDictionary());
+            //client.sendMessage(msg);
         }
 
 

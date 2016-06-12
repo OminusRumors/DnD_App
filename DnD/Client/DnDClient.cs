@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TCP
+namespace DnD
 {
     public class DnDClient
     {

@@ -11,6 +11,8 @@ namespace DnD
     class Game
     {
         Dictionary<Character, Point> charList;
+        Dictionary<Character, Point> npcList;
+        Dictionary<Trap, Point> trapList;
         ServerDelegates svDelegates;
         Map map;
         Dice dice;
@@ -30,6 +32,16 @@ namespace DnD
             playerCounter = 0;
         }
 
+        public Game(Dictionary<Character,Point> charPosList, Dictionary<Character,Point> npcPosList, Dictionary<Trap,Point> trapPosList)
+        {
+            svDelegates = new ServerDelegates();
+            map = new Map();
+            dice = new Dice();
+            charList = charPosList;
+            trapList = trapPosList;
+            npcList = npcPosList;
+        }
+
         public Character NextPlayer()
         {
             Character chara;
@@ -46,10 +58,21 @@ namespace DnD
             }
         }
 
+        public Dictionary<Trap,Point> TrapList
+        {
+            get { return trapList; }
+            set { trapList = value; }
+        }
+
         public Dictionary<Character, Point> CharList
         {
             get { return charList; }
             set { charList = value; }
+        }
+
+        public void AddCharacter(Character character)
+        {
+            charList.Add(character, new Point());
         }
 
         public Character GetCharacter(Point point)

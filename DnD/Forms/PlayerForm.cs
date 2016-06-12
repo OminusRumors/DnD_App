@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DnD
 {
-    public partial class Form5 : Form
+    public partial class PlayerForm : Form
     {
-        public Form5()
+        public PlayerForm()
         {
             InitializeComponent();
         }
