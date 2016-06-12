@@ -23,7 +23,7 @@ namespace DnD
         {
             InitializeComponent();
             serverdelegates = new ServerDelegates();
-            clientdelegates = new ClientDelegates();
+            //clientdelegates = new ClientDelegates();
         }
 
         private void btnStartGame_Click(object sender, EventArgs e)

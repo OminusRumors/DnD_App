@@ -22,3 +22,8 @@ C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Form4.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.DM_Form.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Form5.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.testForm.resources
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Forms.testServer.resources

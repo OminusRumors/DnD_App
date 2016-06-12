@@ -16,6 +16,11 @@ namespace DnD
         Dice dice;
         int playerCounter;
 
+        public Game()
+        {
+
+        }
+
         public Game(Dictionary<Character, Point> charPosList)
         {
             svDelegates = new ServerDelegates();

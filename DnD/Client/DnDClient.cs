@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD;
+using System;
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace TCP
 {
-    internal class DnDClient
+    public class DnDClient
     {
         private Socket _clientSocket;
 
@@ -27,6 +28,14 @@ namespace TCP
         public DnDClient(Control control)
         {
             this.control = control;
+        }
+
+        public DnDClient(Control control, ClientDelegates clientDel)
+        {
+            this.control = control;
+            this.connectDelegate = clientDel.connectedToServer;
+            this.disconnectDelegate = clientDel.disconnectedFromServer;
+            this.messageDelegate = clientDel.serverMessage;
         }
 
         public DnDClient(Control control,ConnectDelegate connectDelegate, DisconnectDelegate disconnectDelegate, ServerMessageDelegate messageDelegate)

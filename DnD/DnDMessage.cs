@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace TCP
 {
     [Serializable]
-    internal class DnDMessage
+    public class DnDMessage
     {
         public string Action;
         public Dictionary<string, string> Properties;

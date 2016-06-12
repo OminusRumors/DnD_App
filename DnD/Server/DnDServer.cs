@@ -9,7 +9,7 @@ using DnD;
 
 namespace TCP
 {
-    internal class DnDServer
+    public class DnDServer
     {
 
         private static Socket _serverSocket;
@@ -22,7 +22,7 @@ namespace TCP
         public delegate void ClientDisconnectDelegate(Socket client);
         public delegate void ClientMessageDelegate(Socket client, DnDMessage message);
 
-        public delegate void ServerLogDelegate(string message);
+        public delegate void ServerLogDelegate(string message, ListBox listBox);
 
         Control control;
         ClientMessageDelegate messageDelegate;
@@ -219,6 +219,10 @@ namespace TCP
                     });
                 }
                 catch (ObjectDisposedException) { }
+                catch (Exception)
+                {
+                    control.Invoke((MethodInvoker)delegate { del.DynamicInvoke(args); }, args);
+                }
             }
         }
 

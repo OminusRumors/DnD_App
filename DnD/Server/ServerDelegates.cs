@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TCP;
 
 namespace DnD
@@ -57,13 +58,14 @@ namespace DnD
             {
                 Character c = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
                 game.CharList.Add(c, new Point());
-                DnDMessage resp = DnDMessage.createWithText("success");
+                DnDMessage resp = new DnDMessage("get_char_info", c.ToDictionary());
                 client.Send(resp.ToByteArray());
             }
         }
 
-        public void handleServerLog(string msg)
+        public void handleServerLog(string msg, ListBox lb)
         {
+            lb.Items.Add(msg);
         }
     }
 }
