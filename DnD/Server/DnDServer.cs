@@ -6,10 +6,11 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DnD;
+using DnD_App;
 
-namespace TCP
+namespace DnD
 {
-    internal class DnDServer
+    public class DnDServer
     {
 
         private static Socket _serverSocket;
@@ -18,11 +19,11 @@ namespace TCP
         private const int _PORT = 100;
         private static readonly byte[] _buffer = new byte[_BUFFER_SIZE];
 
-        public delegate void ClientConnectDelegate(Socket client);
+        public delegate void ClientConnectDelegate(Socket client,Character player);
         public delegate void ClientDisconnectDelegate(Socket client);
         public delegate void ClientMessageDelegate(Socket client, DnDMessage message);
 
-        public delegate void ServerLogDelegate(string message);
+        public delegate void ServerLogDelegate(string message, ListBox listBox);
 
         Control control;
         ClientMessageDelegate messageDelegate;
@@ -33,6 +34,14 @@ namespace TCP
         public DnDServer(Control control)
         {
             this.control = control;
+        }
+
+        public DnDServer(Control control, ServerDelegates serverDelegates)
+        {
+            this.control = control;
+            this.messageDelegate = serverDelegates.clientMessage;
+            this.connectDelegate = serverDelegates.clientConnected;
+            this.disconnectDelegate = serverDelegates.clientDisconnected;
         }
 
         public DnDServer(Control control, ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
@@ -195,7 +204,7 @@ namespace TCP
             return ((IPEndPoint)(s.RemoteEndPoint)).Address.ToString();
         }
 
-        public static string GetLocalIPAddress()
+        public string GetLocalIPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
             foreach (var ip in host.AddressList)
@@ -219,6 +228,10 @@ namespace TCP
                     });
                 }
                 catch (ObjectDisposedException) { }
+                catch (Exception)
+                {
+                    control.Invoke((MethodInvoker)delegate { del.DynamicInvoke(args); }, args);
+                }
             }
         }
 

@@ -8,13 +8,20 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    class Game
+    public class Game
     {
         Dictionary<Character, Point> charList;
+        Dictionary<Character, Point> npcList;
+        Dictionary<Trap, Point> trapList;
         ServerDelegates svDelegates;
         Map map;
         Dice dice;
         int playerCounter;
+
+        public Game()
+        {
+
+        }
 
         public Game(Dictionary<Character, Point> charPosList)
         {
@@ -23,6 +30,16 @@ namespace DnD
             dice = new Dice();
             charList = charPosList;
             playerCounter = 0;
+        }
+
+        public Game(Dictionary<Character,Point> charPosList, Dictionary<Character,Point> npcPosList, Dictionary<Trap,Point> trapPosList)
+        {
+            svDelegates = new ServerDelegates();
+            map = new Map();
+            dice = new Dice();
+            charList = charPosList;
+            trapList = trapPosList;
+            npcList = npcPosList;
         }
 
         public Character NextPlayer()
@@ -41,10 +58,21 @@ namespace DnD
             }
         }
 
+        public Dictionary<Trap,Point> TrapList
+        {
+            get { return trapList; }
+            set { trapList = value; }
+        }
+
         public Dictionary<Character, Point> CharList
         {
             get { return charList; }
             set { charList = value; }
+        }
+
+        public void AddCharacter(Character character)
+        {
+            charList.Add(character, new Point());
         }
 
         public Character GetCharacter(Point point)
@@ -72,18 +100,23 @@ namespace DnD
             }
         }
 
+        public Character GetCharacter(string name)
+        {
+            Character c = charList.FirstOrDefault(t => t.Key.CharName == name).Key;
+            return c;
+        }
+
         /// <summary>
         /// Updates a character's position.
-        /// No checks are done (will be implemented later).
+        /// No checks are done.
         /// </summary>
         /// <param name="character">The moving character.</param>
         /// <param name="newPosition">The new position of the character.</param>
         /// <returns>The new position.</returns>
-        public Point UpdateCharPosition(Character character, Point newPosition)
+        public void UpdateCharPosition(Character character, Point newPosition)
         {
             Character c = charList.First(t => t.Key == character).Key;
             charList[c] = newPosition;
-            return newPosition;
         }
 
         /// <summary>

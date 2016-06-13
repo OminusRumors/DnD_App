@@ -1,6 +1,6 @@
 ﻿namespace DnD
 {
-    partial class Form5
+    partial class PlayerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerForm));
             this.tbSkillCost = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbSpellCost = new System.Windows.Forms.TextBox();
@@ -138,6 +138,7 @@
             this.btnAttack.TabIndex = 55;
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
             // btnMove
             // 
@@ -150,6 +151,7 @@
             this.btnMove.TabIndex = 54;
             this.btnMove.Text = "Move";
             this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // btnCastSkill
             // 
@@ -310,7 +312,7 @@
             this.pbGameGrid.TabIndex = 35;
             this.pbGameGrid.TabStop = false;
             // 
-            // Form5
+            // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -344,7 +346,7 @@
             this.Controls.Add(this.pbGameGrid);
             this.Controls.Add(this.lbLog);
             this.Controls.Add(this.lbPlayerInfo);
-            this.Name = "Form5";
+            this.Name = "PlayerForm";
             this.Text = "Player In-game";
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();
             this.ResumeLayout(false);

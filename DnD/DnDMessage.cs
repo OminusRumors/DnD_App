@@ -4,10 +4,10 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace TCP
+namespace DnD
 {
     [Serializable]
-    internal class DnDMessage
+    public class DnDMessage
     {
         public string Action;
         public Dictionary<string, string> Properties;

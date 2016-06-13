@@ -12,6 +12,16 @@ namespace DnD_App
         private int trapVisibility;
         private bool trapTraversible;
 
+        public Trap()
+        { }
+
+        public Trap(int id, int damage, int visibility)
+        {
+            this.trapId = id;
+            this.trapDamage = damage;
+            this.trapVisibility = visibility;
+        }
+
         public int TrapId
         {
             get { return trapId; }

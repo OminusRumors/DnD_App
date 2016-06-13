@@ -20,7 +20,7 @@ namespace DnD_App
         //private Profession charProfession;
         //private Race charRace;
 
-        public Character(String _name, int[] stats, int armor, Weapon wpan)
+        public Character(String _name, int[] stats, int armor, Weapon wpan, int maxHealth)
         {
             charName = _name;
             this.CharStats = stats;
@@ -28,6 +28,8 @@ namespace DnD_App
             this.CharArmor = armor;
             this.charWeapon = wpan;
             charStats = new int[6];
+            this.charMaxHealth = maxHealth;
+            this.charHealth = maxHealth;
         }
 
         public Character(string name, int health)
