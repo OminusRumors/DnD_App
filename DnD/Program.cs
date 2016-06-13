@@ -1,5 +1,4 @@
-﻿using DnD.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +16,7 @@ namespace DnD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testServer());
+            Application.Run(new MainForm());
         }
     }
 }

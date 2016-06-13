@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    class Game
+    public class Game
     {
         Dictionary<Character, Point> charList;
         Dictionary<Character, Point> npcList;
@@ -100,18 +100,23 @@ namespace DnD
             }
         }
 
+        public Character GetCharacter(string name)
+        {
+            Character c = charList.FirstOrDefault(t => t.Key.CharName == name).Key;
+            return c;
+        }
+
         /// <summary>
         /// Updates a character's position.
-        /// No checks are done (will be implemented later).
+        /// No checks are done.
         /// </summary>
         /// <param name="character">The moving character.</param>
         /// <param name="newPosition">The new position of the character.</param>
         /// <returns>The new position.</returns>
-        public Point UpdateCharPosition(Character character, Point newPosition)
+        public void UpdateCharPosition(Character character, Point newPosition)
         {
             Character c = charList.First(t => t.Key == character).Key;
             charList[c] = newPosition;
-            return newPosition;
         }
 
         /// <summary>

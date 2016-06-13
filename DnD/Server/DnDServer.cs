@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DnD;
+using DnD_App;
 
 namespace DnD
 {
@@ -18,7 +19,7 @@ namespace DnD
         private const int _PORT = 100;
         private static readonly byte[] _buffer = new byte[_BUFFER_SIZE];
 
-        public delegate void ClientConnectDelegate(Socket client);
+        public delegate void ClientConnectDelegate(Socket client,Character player);
         public delegate void ClientDisconnectDelegate(Socket client);
         public delegate void ClientMessageDelegate(Socket client, DnDMessage message);
 

@@ -138,6 +138,7 @@
             this.btnAttack.TabIndex = 55;
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
             // btnMove
             // 
@@ -150,6 +151,7 @@
             this.btnMove.TabIndex = 54;
             this.btnMove.Text = "Move";
             this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // btnCastSkill
             // 
