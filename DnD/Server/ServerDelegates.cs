@@ -1,4 +1,4 @@
-﻿using DnD_App;
+﻿using DnD;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -72,8 +72,10 @@ namespace DnD
                 foreach (Character character in playerListIP.Keys)
                 {
                     client = playerListIP[character];
-                    DnDMessage resp = new DnDMessage("move_player", new Dictionary<string, string>{{"name", c.CharName},
-            {"x",p.X.ToString()},{"y",p.Y.ToString()}});
+                    DnDMessage resp = new DnDMessage("move_player", new Dictionary<string, string>{
+                        {"name", c.CharName},
+                        {"x",p.X.ToString()},
+                        {"y",p.Y.ToString()}});
                     client.Send(resp.ToByteArray());
                 }
 

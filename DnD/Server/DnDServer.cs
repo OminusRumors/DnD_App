@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DnD;
-using DnD_App;
+using DnD;
 
 namespace DnD
 {
