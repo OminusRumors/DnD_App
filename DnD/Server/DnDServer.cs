@@ -74,12 +74,12 @@ namespace DnD
 
         public void start()
         {
-            Log("Setting up server on " + GetLocalIPAddress() + ":" + _PORT);
+            //Log("Setting up server on " + GetLocalIPAddress() + ":" + _PORT);
             _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             _serverSocket.Bind(new IPEndPoint(IPAddress.Any, _PORT));
             _serverSocket.Listen(5);
             _serverSocket.BeginAccept(AcceptCallback, null);
-            Log("Server setup complete");
+            //Log("Server setup complete");
         }
 
         /// <summary>

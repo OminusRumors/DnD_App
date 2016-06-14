@@ -1,0 +1,18 @@
+<class>
+	<warrior>
+		<name>Warrior</name>
+		<baseHealth>10</baseHealth>
+	</warrior>
+	<rogue>
+		<name>Rogue</name>
+		<baseHealth>8</baseHealth>
+	</rogue>
+	<mage>
+		<name>Mage</name>
+		<baseHealth>6</baseHealth>
+	</mage>
+	<hunter>
+		<name>Hunter</name>
+		<baseHealth>10</baseHealth>
+	</hunter>
+</class>

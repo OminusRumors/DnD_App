@@ -25,3 +25,16 @@ C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cac
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.DMaft.resources
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.DMpre.resources
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.PlayerForm.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.exe.config
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.exe
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.pdb
+C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.exe
+C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.pdb
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.DMaft.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.DMpre.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.PlayerForm.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
+C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache

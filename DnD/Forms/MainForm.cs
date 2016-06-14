@@ -25,10 +25,9 @@ namespace DnD
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-
+            DMpre f = new DMpre();
+            f.Show();
         }
-
-
 
         private void btnJoin_Click(object sender, EventArgs e)
         {
@@ -41,8 +40,8 @@ namespace DnD
 
         private void btnCreateChar_Click(object sender, EventArgs e)
         {
-            //CharacterForm f = new CharacterForm();
-            //f.Show();
+            var f = new CharacterForm();
+            f.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

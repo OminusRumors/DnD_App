@@ -55,7 +55,7 @@ namespace DnD
                 DnDMessage response = DnDMessage.createWithText(msg.Action + ": Invalid request\n");
                 client.Send(response.ToByteArray());
             }
-            else if (action == "get_char_from_point")
+            else if (action == "attack_char")
             {
                 Point point = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
                 Character c = game.GetCharacter(point);
