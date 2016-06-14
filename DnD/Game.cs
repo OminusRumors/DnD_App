@@ -1,4 +1,4 @@
-﻿using DnD_App;
+﻿using DnD;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,7 +13,7 @@ namespace DnD
         Dictionary<Character, Point> charList;
         Dictionary<Character, Point> npcList;
         Dictionary<Trap, Point> trapList;
-        ServerDelegates svDelegates;
+        Character currentPlayer;
         Map map;
         Dice dice;
         int playerCounter;
@@ -25,40 +25,42 @@ namespace DnD
 
         public Game(Dictionary<Character, Point> charPosList)
         {
-            svDelegates = new ServerDelegates();
             map = new Map();
             dice = new Dice();
             charList = charPosList;
             playerCounter = 0;
         }
 
-        public Game(Dictionary<Character,Point> charPosList, Dictionary<Character,Point> npcPosList, Dictionary<Trap,Point> trapPosList)
+        public Game(Dictionary<Character, Point> charPosList, Dictionary<Trap, Point> trapPosList)
         {
-            svDelegates = new ServerDelegates();
             map = new Map();
             dice = new Dice();
             charList = charPosList;
             trapList = trapPosList;
-            npcList = npcPosList;
         }
 
         public Character NextPlayer()
         {
-            Character chara;
             if (playerCounter < charList.Count)
             {
-                chara = charList.ElementAt(playerCounter).Key;
+                currentPlayer = charList.ElementAt(playerCounter).Key;
                 playerCounter++;
-                return chara;
+                return currentPlayer;
             }
             else
             {
                 playerCounter = 0;
-                return charList.ElementAt(playerCounter).Key;
+                currentPlayer = charList.ElementAt(playerCounter).Key;
+                return currentPlayer;
             }
         }
 
-        public Dictionary<Trap,Point> TrapList
+        public Character CurrentCharacter
+        {
+            get { return currentPlayer; }
+        }
+
+        public Dictionary<Trap, Point> TrapList
         {
             get { return trapList; }
             set { trapList = value; }
@@ -75,9 +77,31 @@ namespace DnD
             charList.Add(character, new Point());
         }
 
+        public void AddCharacter(Character character, Point point)
+        {
+            charList.Add(character, point);
+        }
+
+        /// <summary>
+        /// Gets the closest player's character from the point.
+        /// </summary>
+        /// <param name="point">The point player clicked.</param>
+        /// <returns>The closest player from the point.</returns>
         public Character GetCharacter(Point point)
         {
             Character c = charList.FirstOrDefault(t => t.Value == point).Key;
+            int tempDistance;
+            int closerDistance = 0;
+            foreach (Character chara in charList.Keys)
+            {
+                //find the distance between the point and the character
+                tempDistance = Convert.ToInt32(Math.Sqrt((point.X - charList[chara].X) ^ 2 + (point.Y - charList[chara].Y) ^ 2));
+                if (tempDistance < closerDistance)
+                {
+                    c = chara;
+                    closerDistance = tempDistance;
+                }
+            }
             return c;
         }
 
@@ -100,6 +124,11 @@ namespace DnD
             }
         }
 
+        /// <summary>
+        /// Gets a character from its name.
+        /// </summary>
+        /// <param name="name">The name of the character.</param>
+        /// <returns>A character instance.</returns>
         public Character GetCharacter(string name)
         {
             Character c = charList.FirstOrDefault(t => t.Key.CharName == name).Key;

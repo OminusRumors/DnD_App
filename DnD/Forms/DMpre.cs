@@ -1,4 +1,4 @@
-﻿using DnD_App;
+﻿using DnD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,8 +55,8 @@ namespace DnD
             npcDict.Add(npc1, new Point(100, 100));
             npcDict.Add(npc2, new Point(50, 100));
 
-            Game game = new Game(charDict, npcDict, new Dictionary<Trap, Point> { { trap1, new Point(25, 25) } });
-            DMaft form = new DMaft(server, game);
+            //Game game = new Game(charDict, npcDict, new Dictionary<Trap, Point> { { trap1, new Point(25, 25) } });
+            //DMaft form = new DMaft(server, game);
         }
     }
 }

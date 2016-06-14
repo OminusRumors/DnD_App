@@ -1,10 +1,8 @@
-﻿using DnD_App;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DnD;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -40,6 +38,10 @@ namespace DnD
             {
                 Character c = playerForm.GetCharacter(msg.Properties["name"]);
                 playerForm.CharPositions[c] = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
+            }
+            else if(msg.Action=="update_health")
+            {
+                playerForm.Character.CharHealth = Convert.ToInt32(msg.Properties["health"]);
             }
             //else if (msg.Action=="get_char_info")
             //{

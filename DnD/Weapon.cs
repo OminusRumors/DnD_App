@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DnD_App
+namespace DnD
 {
     public class Weapon
     {
@@ -17,6 +17,14 @@ namespace DnD_App
 
         public Weapon()
         { }
+
+        public Weapon(int attack)
+        {
+            this.weapAttack = attack;
+            this.weapRange = 2;
+            this.weapCriticalChance = 3;
+            this.weapEffectiveStat = 1;
+        }
 
         public Weapon(int attack, int range, int critChance, int effStat)
         {

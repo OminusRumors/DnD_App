@@ -25,17 +25,17 @@ namespace DnD
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-
+            DMpre f = new DMpre();
+            f.Show();
         }
-
-
 
         private void btnJoin_Click(object sender, EventArgs e)
         {
             string address = tbIP.Text;
             client = new DnDClient(this, clientdelegates);
             client.connectTo(address);
-
+            Character c = new Character("george", new int[] { 6, 6, 6, 6, 6, 6 }, 10, new Weapon(15), 200);
+            PlayerForm pf = new PlayerForm(c, client);
         }
 
         private void btnCreateChar_Click(object sender, EventArgs e)
