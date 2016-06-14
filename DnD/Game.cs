@@ -13,6 +13,7 @@ namespace DnD
         Dictionary<Character, Point> charList;
         Dictionary<Character, Point> npcList;
         Dictionary<Trap, Point> trapList;
+        Character currentPlayer;
         Map map;
         Dice dice;
         int playerCounter;
@@ -30,29 +31,33 @@ namespace DnD
             playerCounter = 0;
         }
 
-        public Game(Dictionary<Character, Point> charPosList, Dictionary<Character, Point> npcPosList, Dictionary<Trap, Point> trapPosList)
+        public Game(Dictionary<Character, Point> charPosList, Dictionary<Trap, Point> trapPosList)
         {
             map = new Map();
             dice = new Dice();
             charList = charPosList;
             trapList = trapPosList;
-            npcList = npcPosList;
         }
 
         public Character NextPlayer()
         {
-            Character chara;
             if (playerCounter < charList.Count)
             {
-                chara = charList.ElementAt(playerCounter).Key;
+                currentPlayer = charList.ElementAt(playerCounter).Key;
                 playerCounter++;
-                return chara;
+                return currentPlayer;
             }
             else
             {
                 playerCounter = 0;
-                return charList.ElementAt(playerCounter).Key;
+                currentPlayer = charList.ElementAt(playerCounter).Key;
+                return currentPlayer;
             }
+        }
+
+        public Character CurrentCharacter
+        {
+            get { return currentPlayer; }
         }
 
         public Dictionary<Trap, Point> TrapList
@@ -70,6 +75,11 @@ namespace DnD
         public void AddCharacter(Character character)
         {
             charList.Add(character, new Point());
+        }
+
+        public void AddCharacter(Character character, Point point)
+        {
+            charList.Add(character, point);
         }
 
         /// <summary>

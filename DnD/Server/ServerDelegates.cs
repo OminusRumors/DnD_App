@@ -1,5 +1,4 @@
-﻿using DnD;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,7 +6,6 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DnD;
 
 namespace DnD
 {
@@ -57,23 +55,35 @@ namespace DnD
                 DnDMessage response = DnDMessage.createWithText(msg.Action + ": Invalid request\n");
                 client.Send(response.ToByteArray());
             }
+            else if (action == "get_char_from_point")
+            {
+                Point point = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
+                Character c = game.GetCharacter(point);
+                bool result = game.Attack(game.CurrentCharacter, c, 10);
+                if (result)
+                {
+                    DnDMessage resp = new DnDMessage("update_health", new Dictionary<string, string> { { "health", c.CharHealth.ToString() } });
+                    Socket defender = playerListIP[c];
+                    defender.Send(resp.ToByteArray());
+                }
+            }
             else if (action == "character_info")
             {
-                Character c = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
-                game.CharList.Add(c, new Point());
-                DnDMessage resp = new DnDMessage("get_char_info", c.ToDictionary());
+                Character chara = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
+                game.CharList.Add(chara, new Point());
+                DnDMessage resp = new DnDMessage("get_char_info", chara.ToDictionary());
                 client.Send(resp.ToByteArray());
             }
             else if (action == "move_player")
             {
-                Character c = game.GetCharacter(msg.Properties["name"]);
+                Character chara = game.GetCharacter(msg.Properties["name"]);
                 Point p = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
-                game.UpdateCharPosition(c, p);
+                game.UpdateCharPosition(chara, p);
                 foreach (Character character in playerListIP.Keys)
                 {
                     client = playerListIP[character];
                     DnDMessage resp = new DnDMessage("move_player", new Dictionary<string, string>{
-                        {"name", c.CharName},
+                        {"name", chara.CharName},
                         {"x",p.X.ToString()},
                         {"y",p.Y.ToString()}});
                     client.Send(resp.ToByteArray());

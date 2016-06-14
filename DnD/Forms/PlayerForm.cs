@@ -23,6 +23,12 @@ namespace DnD
             this.client = client;
         }
 
+        public Character Character
+        {
+            set { this.character = value; }
+            get { return this.character; }
+        }
+
         public Dictionary<Character, Point> CharPositions
         {
             set { charPositions = value; }
@@ -50,6 +56,8 @@ namespace DnD
 
         private void btnAttack_Click(object sender, EventArgs e)
         {
+            //TODO: get the point where the player wants to attack
+            Point point = new Point(10, 10);
 
         }
     }
