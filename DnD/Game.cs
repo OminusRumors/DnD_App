@@ -39,6 +39,12 @@ namespace DnD
             trapList = trapPosList;
         }
 
+        public void AddWeapon(Weapon weapon)
+        {
+            Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.).Key;
+            c.CharWeapon = weapon;
+        }
+
         public Character NextPlayer()
         {
             if (playerCounter < charList.Count)

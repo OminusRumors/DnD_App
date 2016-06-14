@@ -55,6 +55,24 @@ namespace DnD
                 DnDMessage response = DnDMessage.createWithText(msg.Action + ": Invalid request\n");
                 client.Send(response.ToByteArray());
             }
+            else if (action == "initilize_player")
+            {
+                int[] stats = new int[6];
+                for (int i = 0; i < stats.Length; i++)
+                {
+                    stats[i] = Convert.ToInt32(msg.Properties[i.ToString()]);
+                }
+                Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
+                    Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
+                game.AddCharacter(character);
+            }
+            else if (action=="weapon")
+            {
+                Weapon weapon = new Weapon(msg.Properties["player"], Convert.ToInt32(msg.Properties["attack"]),
+                    Convert.ToInt32(msg.Properties["range"]), Convert.ToInt32(msg.Properties["critical"]),
+                    Convert.ToInt32(msg.Properties["effective"]));
+                game.AddWeapon(weapon);
+            }
             else if (action == "attack_char")
             {
                 Point point = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
@@ -66,13 +84,6 @@ namespace DnD
                     Socket defender = playerListIP[c];
                     defender.Send(resp.ToByteArray());
                 }
-            }
-            else if (action == "character_info")
-            {
-                Character chara = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
-                game.CharList.Add(chara, new Point());
-                DnDMessage resp = new DnDMessage("get_char_info", chara.ToDictionary());
-                client.Send(resp.ToByteArray());
             }
             else if (action == "move_player")
             {
@@ -88,7 +99,13 @@ namespace DnD
                         {"y",p.Y.ToString()}});
                     client.Send(resp.ToByteArray());
                 }
-
+            }
+            else if (action == "character_info")
+            {
+                Character chara = new Character(msg.Properties["name"], Convert.ToInt32(msg.Properties["health"]));
+                game.CharList.Add(chara, new Point());
+                DnDMessage resp = new DnDMessage("get_char_info", chara.ToDictionary());
+                client.Send(resp.ToByteArray());
             }
         }
 

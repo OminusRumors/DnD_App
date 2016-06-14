@@ -98,15 +98,5 @@ namespace DnD
 
             return dict;
         }
-
-        /// <summary>
-        /// will take fields from the user(strength, dex,con,int,....)
-        /// size of six;
-        /// </summary>
-        public int[] CharStats { get; set; }
-        public int CharArmor { get; set; }
-        //public List<Item> CharInventory { get; set; }
-        //public Profession CharProfession { get; set; }
-
     }
 }

@@ -34,7 +34,7 @@ namespace DnD
             string address = tbIP.Text;
             client = new DnDClient(this, clientdelegates);
             client.connectTo(address);
-            Character c = new Character("george", new int[] { 6, 6, 6, 6, 6, 6 }, 10, new Weapon(15), 200);
+            Character c = new Character("george", new int[] { 6, 6, 6, 6, 6, 6 }, 10, new Weapon("george", 15), 200);
             PlayerForm pf = new PlayerForm(c, client);
         }
 
