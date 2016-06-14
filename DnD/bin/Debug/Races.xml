@@ -1,5 +1,6 @@
 <race>
 	<human>
+		<name>Human</name>
 		<strChange>1</strChange>
 		<dexChange>1</dexChange>
 		<conChange>1</conChange>
@@ -8,6 +9,7 @@
 		<chaChange>1</chaChange>
 	</human>
 	<dwarf>
+		<name>Dwarf</name>
 		<strChange>2</strChange>
 		<dexChange>0</dexChange>
 		<conChange>2</conChange>
@@ -16,6 +18,7 @@
 		<chaChange>0</chaChange>
 	</dwarf>
 	<elf>
+		<name>Elf</name>
 		<strChange>0</strChange>
 		<dexChange>2</dexChange>
 		<conChange>0</conChange>
@@ -24,6 +27,7 @@
 		<chaChange>0</chaChange>
 	</elf>
 	<halfOrc>
+		<name>HalfOrc</name>
 		<strChange>2</strChange>
 		<dexChange>0</dexChange>
 		<conChange>1</conChange>
@@ -32,6 +36,7 @@
 		<chaChange>0</chaChange>
 	</halfOrc>
 	<halfling>
+		<name>Halfling</name>
 		<strChange>0</strChange>
 		<dexChange>2</dexChange>
 		<conChange>1</conChange>
