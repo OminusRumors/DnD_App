@@ -36,6 +36,7 @@
 		<chaChange>0</chaChange>
 	</halfOrc>
 	<halfling>
+		<name>Halfling</name>
 		<strChange>0</strChange>
 		<dexChange>2</dexChange>
 		<conChange>1</conChange>
