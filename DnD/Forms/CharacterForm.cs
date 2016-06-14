@@ -23,7 +23,7 @@ namespace DnD
         private int charis = 8;
         private int points = 27;
         private XmlDocument doc = new XmlDocument();
-        private Clas
+        private List<Classes> classes = new List<Classes> { };
 
         public CharacterForm()
         {
@@ -44,8 +44,9 @@ namespace DnD
 
             for(int i = 0;i<items.Count;i= i+2)
             {
-
-            }
+                classes.Add(new Classes(items[i], Convert.ToInt32(items[i + 1])));
+                cmbClass.Items.Add(items[i]);
+             }
         }
 
         private void RefreshTextBox()
