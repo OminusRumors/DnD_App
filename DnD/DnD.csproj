@@ -51,6 +51,7 @@
     <Compile Include="Dice.cs" />
     <Compile Include="Client\DnDClient.cs" />
     <Compile Include="DnDMessage.cs" />
+    <Compile Include="Classes.cs" />
     <Compile Include="Forms\DMaft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,7 @@
     <Compile Include="Forms\PlayerForm.designer.cs">
       <DependentUpon>PlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Race.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="SaveLoad.cs" />
     <Compile Include="Server\DnDServer.cs" />

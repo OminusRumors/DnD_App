@@ -22,12 +22,30 @@ namespace DnD
         private int charis = 8;
         private int points = 27;
         private XmlDocument doc = new XmlDocument();
+        private List<Classes> classes = new List<Classes> { };
 
         public CharacterForm()
         {
             InitializeComponent();
             RefreshTextBox();
             doc.LoadXml("<character></character>");
+            XmlTextReader readClass = new XmlTextReader("Class.xml");
+            List<string> items = new List<string> { };
+            while(readClass.Read())
+            {
+                switch(readClass.NodeType)
+                {
+                    case XmlNodeType.Text:
+                        items.Add(readClass.Value);
+                        break;
+                }
+            }
+
+            for(int i = 0;i<items.Count;i= i+2)
+            {
+                classes.Add(new Classes(items[i], Convert.ToInt32(items[i + 1])));
+                cmbClass.Items.Add(items[i]);
+             }
         }
 
         private void RefreshTextBox()
