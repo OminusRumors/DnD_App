@@ -91,6 +91,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(39, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
@@ -100,6 +102,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(27, 362);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
@@ -109,6 +113,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(210, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
@@ -200,6 +206,8 @@
             // lHealth
             // 
             this.lHealth.AutoSize = true;
+            this.lHealth.BackColor = System.Drawing.Color.Transparent;
+            this.lHealth.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lHealth.Location = new System.Drawing.Point(429, 359);
             this.lHealth.Name = "lHealth";
             this.lHealth.Size = new System.Drawing.Size(107, 13);
@@ -209,6 +217,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(429, 405);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
@@ -218,6 +228,8 @@
             // lActionPoints
             // 
             this.lActionPoints.AutoSize = true;
+            this.lActionPoints.BackColor = System.Drawing.Color.Transparent;
+            this.lActionPoints.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lActionPoints.Location = new System.Drawing.Point(564, 385);
             this.lActionPoints.Name = "lActionPoints";
             this.lActionPoints.Size = new System.Drawing.Size(116, 13);
@@ -287,6 +299,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(782, 390);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
@@ -312,6 +326,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Location = new System.Drawing.Point(782, 430);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
@@ -329,6 +345,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Location = new System.Drawing.Point(782, 476);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
@@ -346,6 +364,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label8.Location = new System.Drawing.Point(782, 517);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
