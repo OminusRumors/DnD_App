@@ -14,20 +14,26 @@ namespace DnD
         private string charName;
         private int charHealth;
         private Weapon charWeapon;
+        private int charArmor;
         private int[] charStats;
         private int charMaxHealth;
         private List<Item> charInventory;
-        //private Profession charProfession;
-        //private Race charRace;
 
-        public Character(String _name, int[] stats, int armor, Weapon wpan, int maxHealth)
+        public Character(string name, int[] stats, int armor, Weapon weapon, int maxHealth)
         {
-            charName = _name;
-            this.CharStats = stats;
-            this.charHealth = 100;
-            this.CharArmor = armor;
-            this.charWeapon = wpan;
-            charStats = new int[6];
+            this.charName = name;
+            this.charStats = stats;
+            this.charArmor = armor;
+            this.charWeapon = weapon;
+            this.charMaxHealth = maxHealth;
+            this.charHealth = maxHealth;
+        }
+
+        public Character(string name, int[] stats, int armor, int maxHealth, int currentHealth)
+        {
+            this.charName = name;
+            this.charStats = stats;
+            this.charArmor = armor;
             this.charMaxHealth = maxHealth;
             this.charHealth = maxHealth;
         }
@@ -36,6 +42,12 @@ namespace DnD
         {
             charName = name;
             charHealth = health;
+        }
+
+        public int CharArmor
+        {
+            get { return charArmor; }
+            set { charArmor = value; }
         }
 
         public List<Item> Inventory
@@ -74,7 +86,15 @@ namespace DnD
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
             dict.Add("name", charName);
-            dict.Add("HP", charHealth.ToString());
+            dict.Add("health", charHealth.ToString());
+            dict.Add("maxHealth", charMaxHealth.ToString());
+            dict.Add("armor", charArmor.ToString());
+
+            for (int i = 0; i < charStats.Length; i++)
+            {
+                string stat = i.ToString();
+                dict.Add(stat, charStats[i].ToString());
+            }
 
             return dict;
         }

@@ -21,6 +21,7 @@ namespace DnD
             InitializeComponent();
             this.character = c;
             this.client = client;
+            DnDMessage msg = new DnDMessage("initialize_player", character.ToString());
         }
 
         public Character Character

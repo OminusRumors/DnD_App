@@ -34,6 +34,16 @@ namespace DnD
             this.weapEffectiveStat = effStat;
         }
 
+        public Dictionary<string, string> ToDictionary()
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("attack", weapAttack.ToString());
+            dict.Add("range", weapRange.ToString());
+            dict.Add("critical", weapCriticalChance.ToString());
+            dict.Add("effective", weapEffectiveStat.ToString());
+            return dict;
+        }
+
         public int WeapAttack
         {
             get { return weapAttack; }
