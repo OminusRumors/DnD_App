@@ -9,12 +9,12 @@ namespace DnD
     [Serializable]
     class Stats
     {
-        private int str;
-        private int dex;
-        private int con;
-        private int intel;
-        private int wis;
-        private int charis;
+        public int str { get; private set; }
+        public int dex { get; private set; }
+        public int con { get; private set; }
+        public int intel { get; private set; }
+        public int wis { get; private set; }
+        public int charis { get; private set; }
 
         public Stats()
         { }
