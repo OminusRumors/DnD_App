@@ -8,6 +8,5 @@ namespace DnD
 {
     interface IObject
     {
-
     }
 }
