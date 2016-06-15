@@ -41,7 +41,7 @@ namespace DnD
 
         public void AddWeapon(Weapon weapon)
         {
-            Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.).Key;
+            Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.Player).Key;
             c.CharWeapon = weapon;
         }
 

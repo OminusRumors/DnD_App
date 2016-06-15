@@ -479,19 +479,16 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.tbName);
-<<<<<<< HEAD
-            this.groupBox2.Location = new System.Drawing.Point(338, 18);
+            groupBox2.Location = new System.Drawing.Point(338, 18);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(274, 165);
-=======
             this.groupBox2.Location = new System.Drawing.Point(327, 18);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(288, 213);
->>>>>>> 9c719593c9a36f77e5997337327f353fa6c13ab1
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Step 2";
@@ -574,11 +571,8 @@
             this.groupBox3.Controls.Add(this.checkBox3);
             this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.checkBox1);
-<<<<<<< HEAD
             this.groupBox3.Location = new System.Drawing.Point(642, 18);
-=======
             this.groupBox3.Location = new System.Drawing.Point(643, 31);
->>>>>>> 9c719593c9a36f77e5997337327f353fa6c13ab1
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -790,11 +784,8 @@
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
-<<<<<<< HEAD
             this.groupBox4.Location = new System.Drawing.Point(19, 523);
-=======
             this.groupBox4.Location = new System.Drawing.Point(31, 549);
->>>>>>> 9c719593c9a36f77e5997337327f353fa6c13ab1
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -910,12 +901,9 @@
             this.btnRemoveSpell.BackgroundImage = global::DnD.Properties.Resources.btn_3;
             this.btnRemoveSpell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemoveSpell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< HEAD
             this.btnRemoveSpell.Location = new System.Drawing.Point(293, 76);
-=======
             this.btnRemoveSpell.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveSpell.Image")));
             this.btnRemoveSpell.Location = new System.Drawing.Point(523, 239);
->>>>>>> 9c719593c9a36f77e5997337327f353fa6c13ab1
             this.btnRemoveSpell.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveSpell.Name = "btnRemoveSpell";
             this.btnRemoveSpell.Size = new System.Drawing.Size(121, 32);
@@ -1029,12 +1017,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DnD.Properties.Resources.wood;
-<<<<<<< HEAD
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1036, 741);
-=======
             this.ClientSize = new System.Drawing.Size(1046, 738);
->>>>>>> 9c719593c9a36f77e5997337327f353fa6c13ab1
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.groupBox5);
