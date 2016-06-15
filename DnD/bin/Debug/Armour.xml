@@ -1,0 +1,14 @@
+<Armour>
+	<LeatherArmour>
+		<Name>Leather Armour</Name>
+		<ArmourPoints>2</ArmourPoints>
+	</LeatherArmour>
+	<ScaleMail>
+		<Name>ScaleMail Armour</Name>
+		<ArmourPoints>4</ArmourPoints>
+	</ScaleMail>
+	<FullPlate>
+		<Name>Full plate armour</Name>
+		<ArmourPoints>8</ArmourPoints>
+	</FullPlate>
+</Armour>

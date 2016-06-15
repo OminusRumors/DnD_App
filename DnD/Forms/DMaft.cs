@@ -21,8 +21,8 @@ namespace DnD
         {
             InitializeComponent();
             int[] stats = new int[] { 4, 4, 4, 4, 4, 4 };
-            npc1 = new Character("npc1", stats, 4, new Weapon(5, 2, 3, 2), 100);
-            npc2 = new Character("npc2", stats, 5, new Weapon(6, 1, 2, 1), 100);
+            //npc1 = new Character("npc1", stats, 4, new Weapon(5, 2, 3, 2), 100);
+            //npc2 = new Character("npc2", stats, 5, new Weapon(6, 1, 2, 1), 100);
             trap1 = new Trap(0, 4, 2);
             trap2 = new Trap(1, 4, 2);
         }

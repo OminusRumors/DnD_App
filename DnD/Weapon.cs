@@ -7,7 +7,7 @@ namespace DnD
 {
     public class Weapon
     {
-        private string player;
+        private string wepName;
         private int weapAttack;
         private int weapRange;
         /// <summary>
@@ -15,22 +15,21 @@ namespace DnD
         /// </summary>
         private int weapCriticalChance;
         private int weapEffectiveStat;
-
+        /*
         public Weapon()
         { }
 
-        public Weapon(string player, int attack)
+        public Weapon(int attack)
         {
-            this.player = player;
             this.weapAttack = attack;
             this.weapRange = 2;
             this.weapCriticalChance = 3;
             this.weapEffectiveStat = 1;
         }
-
-        public Weapon(string player, int attack, int range, int critChance, int effStat)
+        */
+        public Weapon(string wepName, int attack, int range, int critChance, int effStat)
         {
-            this.player = player;
+            this.wepName = wepName;
             this.weapAttack = attack;
             this.weapRange = range;
             this.weapCriticalChance = critChance;
@@ -40,7 +39,7 @@ namespace DnD
         public Dictionary<string, string> ToDictionary()
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("player", player);
+            dict.Add("weapon", wepName);
             dict.Add("attack", weapAttack.ToString());
             dict.Add("range", weapRange.ToString());
             dict.Add("critical", weapCriticalChance.ToString());
@@ -48,11 +47,10 @@ namespace DnD
             return dict;
         }
 
-        public string Player
+        public string GetName
         {
-            get { return player; }
+            get { return wepName; }
         }
-
         public int WeapAttack
         {
             get { return weapAttack; }

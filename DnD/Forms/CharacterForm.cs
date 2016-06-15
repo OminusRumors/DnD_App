@@ -14,6 +14,7 @@ namespace DnD
 {
     public partial class CharacterForm : Form
     {
+        private SaveLoadCharacter slc = new SaveLoadCharacter();
         private int str = 8;
         private int dex = 8;
         private int con = 8;
@@ -21,15 +22,16 @@ namespace DnD
         private int wis = 8;
         private int charis = 8;
         private int points = 27;
-        private XmlDocument doc = new XmlDocument();
         private List<Classes> classes = new List<Classes> { };
         private List<Race> races = new List<Race> { };
+        private List<Weapon> weapons = new List<Weapon> { };
+        private List<Armor> armors = new List<Armor> { };
 
         public CharacterForm()
         {
             InitializeComponent();
             RefreshTextBox();
-            doc.LoadXml("<character></character>");
+
             XmlTextReader readClass = new XmlTextReader("Class.xml");
             List<string> items = new List<string> { };
             while (readClass.Read())
@@ -63,6 +65,42 @@ namespace DnD
             {
                 races.Add(new Race(items[i], Convert.ToInt32(items[i + 1]), Convert.ToInt32(items[i + 2]), Convert.ToInt32(items[i + 3]), Convert.ToInt32(items[i + 4]), Convert.ToInt32(items[i + 5]), Convert.ToInt32(items[i + 6]),Convert.ToInt32(items[i+7])));
                 cmbRace.Items.Add(items[i]);
+            }
+
+            XmlTextReader readWeapon = new XmlTextReader("Weapon.xml");
+            items = new List<string> { };
+            while (readWeapon.Read())
+            {
+                switch (readWeapon.NodeType)
+                {
+                    case XmlNodeType.Text:
+                        items.Add(readWeapon.Value);
+                        break;
+                }
+            }
+
+            for (int i = 0; i < items.Count; i = i + 5)
+            {
+                weapons.Add(new Weapon(items[i], Convert.ToInt32(items[i + 1]), Convert.ToInt32(items[i + 2]), Convert.ToInt32(items[i + 3]), Convert.ToInt32(items[i + 4])));
+                cmbMain.Items.Add(items[i]);
+            }
+
+            XmlTextReader readArmor = new XmlTextReader("Armour.xml");
+            items = new List<string> { };
+            while (readArmor.Read())
+            {
+                switch (readArmor.NodeType)
+                {
+                    case XmlNodeType.Text:
+                        items.Add(readArmor.Value);
+                        break;
+                }
+            }
+
+            for (int i = 0; i < items.Count; i = i + 2)
+            {
+                armors.Add(new Armor(items[i], Convert.ToInt32(items[i + 1])));
+                cmbArmor.Items.Add(items[i]);
             }
         }
 
@@ -244,10 +282,10 @@ namespace DnD
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            List<XmlElement> newElements = new List<XmlElement> { };
-            XmlElement tempElement;
             Race r = races[cmbRace.SelectedIndex];
             Classes c = classes[cmbClass.SelectedIndex];
+            Weapon w = weapons[cmbMain.SelectedIndex];
+            Armor a = armors[cmbArmor.SelectedIndex];
             int tempStr = (str + r.str);
             int tempDex = (dex + r.dex);
             int tempCon = (con + r.con);
@@ -255,88 +293,14 @@ namespace DnD
             int tempWis = (wis + r.wis);
             int tempChar = (charis + r.charis);
 
-            tempElement = doc.CreateElement("name");
-            tempElement.InnerText = tbName.Text;
-            newElements.Add(tempElement);
+            int[] stats = new int[6] { tempStr, tempDex, tempCon, tempInt, tempWis, tempChar };
 
-            tempElement = doc.CreateElement("class");
-            tempElement.InnerText = c.name;
-            newElements.Add(tempElement);
+            int[] statsMod = new int[6] { (int)Math.Round(((tempStr - 10) / 2F) - 0.5), (int)Math.Round(((tempDex - 10) / 2F) - 0.5), (int)Math.Round(((tempCon - 10) / 2f) - 0.5), (int)Math.Round(((tempInt - 10) / 2f) - 0.5), (int)Math.Round(((tempWis - 10) / 2f) - 0.5), (int)Math.Round(((tempChar - 10) / 2f) - 0.5) };
 
-            tempElement = doc.CreateElement("race");
-            tempElement.InnerText = r.name;
-            newElements.Add(tempElement);
+            Character character = new Character(tbName.Text, stats, statsMod, a.protection, w, (int)Math.Round(((tempCon - 10) / 2f) - 0.5) + c.baseHealth, r.speed);
 
-            tempElement = doc.CreateElement("level");
-            tempElement.InnerText = tbLevel.Text;
-            newElements.Add(tempElement);
+            slc.SerializeObject<Character>(character, tbName.Text+".char");
 
-            tempElement = doc.CreateElement("Strength");
-            tempElement.InnerText = tempStr.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("dexterity");
-            tempElement.InnerText = tempDex.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("constitution");
-            tempElement.InnerText = tempCon.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("inteligence");
-            tempElement.InnerText = tempInt.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("wisdom");
-            tempElement.InnerText = tempWis.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("charisma");
-            tempElement.InnerText = tempChar.ToString();
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("strMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempStr - 10) / 2F) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("dexMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempDex - 10) / 2F) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("conMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempCon - 10) / 2f) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("wisMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempWis - 10) / 2f) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("intMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempInt - 10) / 2f) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("chaMod");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempChar - 10) / 2f) - 0.5));
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("health");
-            tempElement.InnerText = Convert.ToString(Math.Round(((tempCon - 10) / 2f) - 0.5) + c.baseHealth);
-            newElements.Add(tempElement);
-
-            tempElement = doc.CreateElement("speed");
-            tempElement.InnerText = Convert.ToString(r.speed);
-            newElements.Add(tempElement);
-
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
-
-            foreach (XmlElement xml in newElements)
-            {
-                doc.DocumentElement.AppendChild(xml);
-            }
-
-            XmlWriter writer = XmlWriter.Create(tbName.Text + ".xml", settings);
-            doc.Save(writer);
         }
 
         private void tbLevel_TextChanged(object sender, EventArgs e)

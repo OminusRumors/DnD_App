@@ -15,9 +15,12 @@ namespace DnD
         private int charHealth;
         private Weapon charWeapon;
         private int charArmor;
+        //stats stored (strength,dex,constitution,inteligence,wisdom,charisma)
         private int[] charStats;
         private int charMaxHealth;
         private List<Item> charInventory;
+        private int[] charStatsMod;
+        private int speed;
 
         public Character(string name, int[] stats, int armor, Weapon weapon, int maxHealth)
         {
@@ -27,6 +30,19 @@ namespace DnD
             this.charWeapon = weapon;
             this.charMaxHealth = maxHealth;
             this.charHealth = maxHealth;
+        }
+
+        //this is used by character creation 
+        public Character(string name, int[] stats, int[] statsMod, int armor, Weapon weapon, int maxHealth, int speed)
+        {
+            this.charName = name;
+            this.charStats = stats;
+            this.charStatsMod = statsMod;
+            this.charArmor = armor;
+            this.charWeapon = weapon;
+            this.charMaxHealth = maxHealth;
+            this.charHealth = maxHealth;
+            this.speed = speed;
         }
 
         public Character(string name, int[] stats, int armor, int maxHealth, int currentHealth)
