@@ -54,9 +54,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(37, 9);
+            this.label1.Location = new System.Drawing.Point(49, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 13);
+            this.label1.Size = new System.Drawing.Size(163, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Currently Selected NPCs";
             // 
@@ -65,9 +66,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(516, 553);
+            this.label2.Location = new System.Drawing.Point(688, 681);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Your IP:";
             // 
@@ -76,34 +78,40 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(37, 290);
+            this.label3.Location = new System.Drawing.Point(49, 357);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(112, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Current Hazards";
             // 
             // lbNPCs
             // 
             this.lbNPCs.FormattingEnabled = true;
-            this.lbNPCs.Location = new System.Drawing.Point(40, 29);
+            this.lbNPCs.ItemHeight = 16;
+            this.lbNPCs.Location = new System.Drawing.Point(53, 36);
+            this.lbNPCs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbNPCs.Name = "lbNPCs";
-            this.lbNPCs.Size = new System.Drawing.Size(170, 225);
+            this.lbNPCs.Size = new System.Drawing.Size(225, 276);
             this.lbNPCs.TabIndex = 5;
             // 
             // lbHazards
             // 
             this.lbHazards.FormattingEnabled = true;
-            this.lbHazards.Location = new System.Drawing.Point(40, 306);
+            this.lbHazards.ItemHeight = 16;
+            this.lbHazards.Location = new System.Drawing.Point(53, 377);
+            this.lbHazards.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbHazards.Name = "lbHazards";
-            this.lbHazards.Size = new System.Drawing.Size(170, 225);
+            this.lbHazards.Size = new System.Drawing.Size(225, 276);
             this.lbHazards.TabIndex = 6;
             // 
             // lbHostIp
             // 
-            this.lbHostIp.Location = new System.Drawing.Point(568, 550);
+            this.lbHostIp.Location = new System.Drawing.Point(757, 677);
+            this.lbHostIp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbHostIp.Name = "lbHostIp";
             this.lbHostIp.ReadOnly = true;
-            this.lbHostIp.Size = new System.Drawing.Size(100, 20);
+            this.lbHostIp.Size = new System.Drawing.Size(132, 22);
             this.lbHostIp.TabIndex = 8;
             // 
             // btnStartGame
@@ -111,9 +119,10 @@
             this.btnStartGame.BackgroundImage = global::DnD.Properties.Resources.btn_2;
             this.btnStartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartGame.Location = new System.Drawing.Point(773, 553);
+            this.btnStartGame.Location = new System.Drawing.Point(1031, 681);
+            this.btnStartGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStartGame.Name = "btnStartGame";
-            this.btnStartGame.Size = new System.Drawing.Size(98, 23);
+            this.btnStartGame.Size = new System.Drawing.Size(131, 28);
             this.btnStartGame.TabIndex = 9;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
@@ -124,9 +133,10 @@
             this.btnPlaceHazards.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlaceHazards.BackgroundImage")));
             this.btnPlaceHazards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlaceHazards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaceHazards.Location = new System.Drawing.Point(554, 345);
+            this.btnPlaceHazards.Location = new System.Drawing.Point(739, 425);
+            this.btnPlaceHazards.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlaceHazards.Name = "btnPlaceHazards";
-            this.btnPlaceHazards.Size = new System.Drawing.Size(114, 23);
+            this.btnPlaceHazards.Size = new System.Drawing.Size(152, 28);
             this.btnPlaceHazards.TabIndex = 10;
             this.btnPlaceHazards.Text = "Place Hazards";
             this.btnPlaceHazards.UseVisualStyleBackColor = true;
@@ -136,9 +146,10 @@
             this.btnPlayerSpawn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlayerSpawn.BackgroundImage")));
             this.btnPlayerSpawn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlayerSpawn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayerSpawn.Location = new System.Drawing.Point(392, 345);
+            this.btnPlayerSpawn.Location = new System.Drawing.Point(523, 425);
+            this.btnPlayerSpawn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlayerSpawn.Name = "btnPlayerSpawn";
-            this.btnPlayerSpawn.Size = new System.Drawing.Size(127, 23);
+            this.btnPlayerSpawn.Size = new System.Drawing.Size(169, 28);
             this.btnPlayerSpawn.TabIndex = 11;
             this.btnPlayerSpawn.Text = "Place Player Spawn";
             this.btnPlayerSpawn.UseVisualStyleBackColor = true;
@@ -148,9 +159,10 @@
             this.btnPlaceNPCs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlaceNPCs.BackgroundImage")));
             this.btnPlaceNPCs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlaceNPCs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlaceNPCs.Location = new System.Drawing.Point(240, 345);
+            this.btnPlaceNPCs.Location = new System.Drawing.Point(320, 425);
+            this.btnPlaceNPCs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlaceNPCs.Name = "btnPlaceNPCs";
-            this.btnPlaceNPCs.Size = new System.Drawing.Size(117, 23);
+            this.btnPlaceNPCs.Size = new System.Drawing.Size(156, 28);
             this.btnPlaceNPCs.TabIndex = 12;
             this.btnPlaceNPCs.Text = "Place NPCs";
             this.btnPlaceNPCs.UseVisualStyleBackColor = true;
@@ -161,9 +173,10 @@
             this.btnRemoveNPCs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveNPCs.BackgroundImage")));
             this.btnRemoveNPCs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemoveNPCs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRemoveNPCs.Location = new System.Drawing.Point(240, 395);
+            this.btnRemoveNPCs.Location = new System.Drawing.Point(320, 486);
+            this.btnRemoveNPCs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoveNPCs.Name = "btnRemoveNPCs";
-            this.btnRemoveNPCs.Size = new System.Drawing.Size(117, 23);
+            this.btnRemoveNPCs.Size = new System.Drawing.Size(156, 28);
             this.btnRemoveNPCs.TabIndex = 13;
             this.btnRemoveNPCs.Text = "Remove NPCs";
             this.btnRemoveNPCs.UseVisualStyleBackColor = true;
@@ -173,9 +186,10 @@
             this.btnRemovePlayerSpawn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemovePlayerSpawn.BackgroundImage")));
             this.btnRemovePlayerSpawn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemovePlayerSpawn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRemovePlayerSpawn.Location = new System.Drawing.Point(392, 395);
+            this.btnRemovePlayerSpawn.Location = new System.Drawing.Point(523, 486);
+            this.btnRemovePlayerSpawn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemovePlayerSpawn.Name = "btnRemovePlayerSpawn";
-            this.btnRemovePlayerSpawn.Size = new System.Drawing.Size(127, 23);
+            this.btnRemovePlayerSpawn.Size = new System.Drawing.Size(169, 28);
             this.btnRemovePlayerSpawn.TabIndex = 14;
             this.btnRemovePlayerSpawn.Text = "Remove Player Spawn";
             this.btnRemovePlayerSpawn.UseVisualStyleBackColor = true;
@@ -185,9 +199,10 @@
             this.btnRemoveHazards.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveHazards.BackgroundImage")));
             this.btnRemoveHazards.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemoveHazards.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRemoveHazards.Location = new System.Drawing.Point(554, 395);
+            this.btnRemoveHazards.Location = new System.Drawing.Point(739, 486);
+            this.btnRemoveHazards.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoveHazards.Name = "btnRemoveHazards";
-            this.btnRemoveHazards.Size = new System.Drawing.Size(114, 23);
+            this.btnRemoveHazards.Size = new System.Drawing.Size(152, 28);
             this.btnRemoveHazards.TabIndex = 15;
             this.btnRemoveHazards.Text = "Remove Hazards";
             this.btnRemoveHazards.UseVisualStyleBackColor = true;
@@ -197,9 +212,10 @@
             this.btnSelectMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelectMap.BackgroundImage")));
             this.btnSelectMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSelectMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectMap.Location = new System.Drawing.Point(717, 372);
+            this.btnSelectMap.Location = new System.Drawing.Point(956, 458);
+            this.btnSelectMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelectMap.Name = "btnSelectMap";
-            this.btnSelectMap.Size = new System.Drawing.Size(98, 23);
+            this.btnSelectMap.Size = new System.Drawing.Size(131, 28);
             this.btnSelectMap.TabIndex = 16;
             this.btnSelectMap.Text = "Select Map";
             this.btnSelectMap.UseVisualStyleBackColor = true;
@@ -209,9 +225,10 @@
             this.btnAddNPC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddNPC.BackgroundImage")));
             this.btnAddNPC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddNPC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNPC.Location = new System.Drawing.Point(40, 264);
+            this.btnAddNPC.Location = new System.Drawing.Point(53, 325);
+            this.btnAddNPC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddNPC.Name = "btnAddNPC";
-            this.btnAddNPC.Size = new System.Drawing.Size(117, 23);
+            this.btnAddNPC.Size = new System.Drawing.Size(156, 28);
             this.btnAddNPC.TabIndex = 17;
             this.btnAddNPC.Text = "Add NPC";
             this.btnAddNPC.UseVisualStyleBackColor = true;
@@ -221,28 +238,30 @@
             this.btnAddHazard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddHazard.BackgroundImage")));
             this.btnAddHazard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddHazard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddHazard.Location = new System.Drawing.Point(40, 543);
+            this.btnAddHazard.Location = new System.Drawing.Point(53, 668);
+            this.btnAddHazard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddHazard.Name = "btnAddHazard";
-            this.btnAddHazard.Size = new System.Drawing.Size(117, 23);
+            this.btnAddHazard.Size = new System.Drawing.Size(156, 28);
             this.btnAddHazard.TabIndex = 18;
             this.btnAddHazard.Text = "Add Hazard";
             this.btnAddHazard.UseVisualStyleBackColor = true;
             // 
             // pbGameGrid
             // 
-            this.pbGameGrid.Location = new System.Drawing.Point(226, 29);
+            this.pbGameGrid.Location = new System.Drawing.Point(301, 36);
+            this.pbGameGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbGameGrid.Name = "pbGameGrid";
-            this.pbGameGrid.Size = new System.Drawing.Size(645, 290);
+            this.pbGameGrid.Size = new System.Drawing.Size(860, 357);
             this.pbGameGrid.TabIndex = 4;
             this.pbGameGrid.TabStop = false;
             // 
             // DMpre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DnD.Properties.Resources.wood;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(911, 588);
+            this.ClientSize = new System.Drawing.Size(1215, 724);
             this.Controls.Add(this.btnAddHazard);
             this.Controls.Add(this.btnAddNPC);
             this.Controls.Add(this.btnSelectMap);
@@ -260,6 +279,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DMpre";
             this.Text = "Host";
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();

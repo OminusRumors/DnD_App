@@ -302,6 +302,8 @@ namespace DnD
 
             slc.SerializeObject<Character>(character, tbName.Text+".char");
 
+            this.Close();
+
         }
 
         private void tbLevel_TextChanged(object sender, EventArgs e)
