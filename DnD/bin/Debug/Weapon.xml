@@ -1,0 +1,30 @@
+<Weapon>
+	<Greataxe>
+		<Attack>10</Attack>
+		<Range>10</Range>
+		<Summary>A two-handed axe made for battle.</Summary>
+		<CriticalChance>20</CriticalChance>
+		<EffectiveStat>Strength</EffectiveStat>
+	</Greataxe>
+	<Shortsword>
+		<Attack>4</Attack>
+		<Range>5</Range>
+		<Summary>A basic short combat sword.</Summary>
+		<CriticalChance>19</CriticalChance>
+		<EffectiveStat>Strength</EffectiveStat>	
+	</Shortsword>
+	<Quarterstaff>
+		<Attack>4</Attack>
+		<Range>10</Range>
+		<Summary></Summary>
+		<CriticalChance>20</CriticalChance>
+		<EffectiveStat>Intelligence</EffectiveStat>	
+	</Quarterstaff>
+	<Shortbow>
+		<Attack>4</Attack>
+		<Range>30</Range>
+		<Summary>A weapon used for firing projectiles.</Summary>
+		<CriticalChance>20</CriticalChance>
+		<EffectiveStat>Dexterity</EffectiveStat>	
+	</Shortbow>
+</Weapon>
