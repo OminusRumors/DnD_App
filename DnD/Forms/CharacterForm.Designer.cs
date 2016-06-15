@@ -479,7 +479,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.tbName);
-            groupBox2.Location = new System.Drawing.Point(338, 18);
+            this.groupBox2.Location = new System.Drawing.Point(338, 18);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
