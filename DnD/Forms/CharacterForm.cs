@@ -49,6 +49,7 @@ namespace DnD
                 classes.Add(new Classes(items[i], Convert.ToInt32(items[i + 1])));
                 cmbClass.Items.Add(items[i]);
             }
+
             XmlTextReader readRace = new XmlTextReader("Races.xml");
             items = new List<string> { };
             while (readRace.Read())
