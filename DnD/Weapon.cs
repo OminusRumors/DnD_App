@@ -11,23 +11,12 @@ namespace DnD
         private string wepName;
         private int weapAttack;
         private int weapRange;
-        /// <summary>
-        /// Maximum of 10
-        /// </summary>
         private int weapCriticalChance;
         private int weapEffectiveStat;
         
         public Weapon()
         { }
-        /*
-        public Weapon(int attack)
-        {
-            this.weapAttack = attack;
-            this.weapRange = 2;
-            this.weapCriticalChance = 3;
-            this.weapEffectiveStat = 1;
-        }
-        */
+
         public Weapon(string wepName, int attack, int range, int critChance, int effStat)
         {
             this.wepName = wepName;
@@ -48,9 +37,10 @@ namespace DnD
             return dict;
         }
 
-        public string GetName
+        public string WepName
         {
             get { return wepName; }
+            set { wepName = value; }
         }
         public int WeapAttack
         {

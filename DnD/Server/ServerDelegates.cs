@@ -62,9 +62,9 @@ namespace DnD
                 {
                     stats[i] = Convert.ToInt32(msg.Properties[i.ToString()]);
                 }
-                Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
-                    Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
-                game.AddCharacter(character);
+                //Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
+                    //Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
+                //game.AddCharacter(character);
             }
             else if (action=="weapon")
             {

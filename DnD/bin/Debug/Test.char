@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CharArmor>2</CharArmor>
+  <CharName>Test</CharName>
+  <CharHealth>9</CharHealth>
+  <CharMaxHealth>9</CharMaxHealth>
+  <CharWeapon>
+    <WepName>Great Axe</WepName>
+    <WeapAttack>10</WeapAttack>
+    <WeapRange>10</WeapRange>
+    <WeapCriticalChance>20</WeapCriticalChance>
+    <WeapEffStat>1</WeapEffStat>
+  </CharWeapon>
+  <CharStats>
+    <str>9</str>
+    <dex>9</dex>
+    <con>9</con>
+    <intel>9</intel>
+    <wis>9</wis>
+    <charis>9</charis>
+  </CharStats>
+  <CharStatsMod>
+    <str>-1</str>
+    <dex>-1</dex>
+    <con>-1</con>
+    <intel>-1</intel>
+    <wis>-1</wis>
+    <charis>-1</charis>
+  </CharStatsMod>
+  <Speed>30</Speed>
+</Character>

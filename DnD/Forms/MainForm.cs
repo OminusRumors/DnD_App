@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnD;
+using System.IO;
 
 namespace DnD
 {
@@ -31,11 +32,12 @@ namespace DnD
 
         private void btnJoin_Click(object sender, EventArgs e)
         {
+            SaveLoadCharacter slc = new SaveLoadCharacter();
             string address = tbIP.Text;
             client = new DnDClient(this, clientdelegates);
             client.connectTo(address);
-            //Character c = new Character("george", new int[] { 6, 6, 6, 6, 6, 6 }, 10, new Weapon("george", 15), 200);
-            //PlayerForm pf = new PlayerForm(c, client);
+            Character c = slc.DeSerializeObject<Character>("../Debug/"+lbChar.SelectedItem.ToString());
+            PlayerForm pf = new PlayerForm(c, client);
         }
 
         private void btnCreateChar_Click(object sender, EventArgs e)
@@ -47,6 +49,21 @@ namespace DnD
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbChar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            lbChar.Items.Clear();
+            string[] characters = Directory.GetFiles("../Debug", "*.char").Select(path => Path.GetFileName(path)).ToArray();
+            foreach (var character in characters)
+            {
+                lbChar.Items.Add(character);
+            }
         }
     }
 }

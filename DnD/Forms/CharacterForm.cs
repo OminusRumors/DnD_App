@@ -294,14 +294,14 @@ namespace DnD
             int tempWis = (wis + r.wis);
             int tempChar = (charis + r.charis);
 
-            int[] stats = new int[6] { tempStr, tempDex, tempCon, tempInt, tempWis, tempChar };
+            Stats stats = new Stats(tempStr, tempDex, tempCon, tempInt, tempWis, tempChar );
 
-            int[] statsMod = new int[6] { (int)Math.Round(((tempStr - 10) / 2F) - 0.5), (int)Math.Round(((tempDex - 10) / 2F) - 0.5), (int)Math.Round(((tempCon - 10) / 2f) - 0.5), (int)Math.Round(((tempInt - 10) / 2f) - 0.5), (int)Math.Round(((tempWis - 10) / 2f) - 0.5), (int)Math.Round(((tempChar - 10) / 2f) - 0.5) };
+            Stats statsMod = new Stats( (int)Math.Round(((tempStr - 10) / 2F) - 0.5), (int)Math.Round(((tempDex - 10) / 2F) - 0.5), (int)Math.Round(((tempCon - 10) / 2f) - 0.5), (int)Math.Round(((tempInt - 10) / 2f) - 0.5), (int)Math.Round(((tempWis - 10) / 2f) - 0.5), (int)Math.Round(((tempChar - 10) / 2f) - 0.5) );
 
             Character character = new Character(tbName.Text, stats, statsMod, a.protection, w, (int)Math.Round(((tempCon - 10) / 2f) - 0.5) + c.baseHealth, r.speed);
 
             slc.SerializeObject<Character>(character, tbName.Text+".char");
-
+            
             this.Close();
 
         }

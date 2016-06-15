@@ -15,7 +15,6 @@ namespace DnD
         private int charHealth;
         private Weapon charWeapon;
         private int charArmor;
-        //stats stored (strength,dex,constitution,inteligence,wisdom,charisma)
         private Stats charStats;
         private int charMaxHealth;
         private List<Item> charInventory;
@@ -97,6 +96,24 @@ namespace DnD
             get { return charWeapon; }
             set { charWeapon = value; }
         }
+
+        public Stats CharStats
+        {
+            get { return charStats; }
+            set { charStats = value; }
+        }
+
+        public Stats CharStatsMod
+        {
+            get { return charStatsMod; }
+            set { charStatsMod = value; }
+        }
+        public int Speed
+        {
+            get { return speed; }
+            set { speed = value; }
+        }
+
         public int GetDamage()
         {
             return charWeapon.WeapAttack + charStatsMod.str;
@@ -110,13 +127,6 @@ namespace DnD
             dict.Add("health", charHealth.ToString());
             dict.Add("maxHealth", charMaxHealth.ToString());
             dict.Add("armor", charArmor.ToString());
-
-            //for (int i = 0; i < charStats.Length; i++)
-            //{
-            //    string stat = i.ToString();
-            //    dict.Add(stat, charStats[i].ToString());
-            //}
-
             return dict;
         }
     }

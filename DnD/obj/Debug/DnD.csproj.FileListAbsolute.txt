@@ -41,7 +41,6 @@ C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.C
 C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.exe.config
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.exe
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.pdb
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.DMaft.resources
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.DMpre.resources
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.PlayerForm.resources
@@ -63,3 +62,4 @@ F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.Propertie
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.exe
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.pdb
+C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
