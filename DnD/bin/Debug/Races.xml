@@ -7,6 +7,7 @@
 		<wisChange>1</wisChange>
 		<intChange>1</intChange>
 		<chaChange>1</chaChange>
+		<speed>30</speed>
 	</human>
 	<dwarf>
 		<name>Dwarf</name>
@@ -16,6 +17,7 @@
 		<wisChange>0</wisChange>
 		<intChange>0</intChange>
 		<chaChange>0</chaChange>
+		<speed>20</speed>
 	</dwarf>
 	<elf>
 		<name>Elf</name>
@@ -25,6 +27,7 @@
 		<wisChange>0</wisChange>
 		<intChange>1</intChange>
 		<chaChange>0</chaChange>
+		<speed>40</speed>
 	</elf>
 	<halfOrc>
 		<name>HalfOrc</name>
@@ -34,6 +37,7 @@
 		<wisChange>0</wisChange>
 		<intChange>0</intChange>
 		<chaChange>0</chaChange>
+		<speed>40</speed>
 	</halfOrc>
 	<halfling>
 		<name>Halfling</name>
@@ -43,5 +47,6 @@
 		<wisChange>0</wisChange>
 		<intChange>0</intChange>
 		<chaChange>0</chaChange>
+		<speed>20</speed>
 	</halfling>
 </race>

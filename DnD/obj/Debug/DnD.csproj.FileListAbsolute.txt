@@ -38,3 +38,6 @@ C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
 C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
 C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
 C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.exe.config
+C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.exe
+C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.pdb
