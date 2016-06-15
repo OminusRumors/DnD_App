@@ -10,9 +10,11 @@ namespace DnD
 {
     public class Game
     {
+        
         Dictionary<Character, Point> charList;
         Dictionary<Character, Point> npcList;
         Dictionary<Trap, Point> trapList;
+        
         Character currentPlayer;
         Map map;
         Dice dice;
@@ -23,6 +25,11 @@ namespace DnD
 
         }
 
+        public Game(IObject[,] storage)
+        {
+            map = new Map(storage);
+        }
+        /*
         public Game(Dictionary<Character, Point> charPosList)
         {
             map = new Map();
@@ -38,7 +45,7 @@ namespace DnD
             charList = charPosList;
             trapList = trapPosList;
         }
-
+        */
         public void AddWeapon(Weapon weapon)
         {
             //Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.Player).Key;
@@ -81,6 +88,11 @@ namespace DnD
         public void AddCharacter(Character character)
         {
             charList.Add(character, new Point());
+        }
+
+        public void SetSpawn(int spawnx, int spawny)
+        {
+            map.SpawnLoc(spawnx,spawny);
         }
 
         public void AddCharacter(Character character, Point point)

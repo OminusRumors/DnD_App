@@ -9,9 +9,9 @@ namespace DnD
     public class Map
     {
         //private List<Trap> trapPosition;
-        private int[,] charSpawn;
-        //to keep the all objedts in the array
-        private IObject[,] Storage;
+        private Point charSpawn;
+        private IObject[,] storage;
+
         private Dictionary<Trap, Point> trapPosList;
 
         public Map()
@@ -19,10 +19,20 @@ namespace DnD
 
         }
 
+        public Map(IObject[,] storage)
+        {
+            this.storage = storage;
+        }
+
         public Dictionary<Trap, Point> TrapPosList
         {
             get { return trapPosList; }
             set { trapPosList = value; }
+        }
+
+        internal void SpawnLoc(int spawnx, int spawny)
+        {
+            charSpawn = new Point(spawnx, spawny);
         }
     }
 }

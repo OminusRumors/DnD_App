@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD
 {
-    interface IObject
+    public interface IObject
     {
     }
 }
