@@ -19,7 +19,7 @@ namespace DnD
         private Stats charStats;
         private int charMaxHealth;
         private List<Item> charInventory;
-        private int[] charStatsMod;
+        private Stats charStatsMod;
         private int speed;
 
         public Character()
@@ -27,7 +27,7 @@ namespace DnD
 
         }
 
-        public Character(string name, int[] stats, int armor, Weapon weapon, int maxHealth)
+        public Character(string name, Stats stats, int armor, Weapon weapon, int maxHealth)
         {
             this.charName = name;
             this.charStats = stats;
@@ -50,7 +50,7 @@ namespace DnD
             this.speed = speed;
         }
 
-        public Character(string name, int[] stats, int armor, int maxHealth, int currentHealth)
+        public Character(string name, Stats stats, int armor, int maxHealth, int currentHealth)
         {
             this.charName = name;
             this.charStats = stats;
@@ -99,7 +99,7 @@ namespace DnD
         }
         public int GetDamage()
         {
-            return charWeapon.WeapAttack + charStats[charWeapon.WeapEffStat];
+            return charWeapon.WeapAttack + charStatsMod.str;
         }
 
         public Dictionary<string, string> ToDictionary()
@@ -111,11 +111,11 @@ namespace DnD
             dict.Add("maxHealth", charMaxHealth.ToString());
             dict.Add("armor", charArmor.ToString());
 
-            for (int i = 0; i < charStats.Length; i++)
-            {
-                string stat = i.ToString();
-                dict.Add(stat, charStats[i].ToString());
-            }
+            //for (int i = 0; i < charStats.Length; i++)
+            //{
+            //    string stat = i.ToString();
+            //    dict.Add(stat, charStats[i].ToString());
+            //}
 
             return dict;
         }
