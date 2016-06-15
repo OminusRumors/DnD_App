@@ -72,6 +72,7 @@
     <Compile Include="Forms\PlayerForm.designer.cs">
       <DependentUpon>PlayerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IObject.cs" />
     <Compile Include="Race.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="SaveLoad.cs" />
