@@ -10,6 +10,8 @@ namespace DnD
     {
         //private List<Trap> trapPosition;
         private int[,] charSpawn;
+        //to keep the all objedts in the array
+        private IObject[,] Storage;
         private Dictionary<Trap, Point> trapPosList;
 
         public Map()

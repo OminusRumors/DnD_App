@@ -51,3 +51,6 @@ C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.Properties.Resources.res
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
 C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.exe
 C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.pdb
+F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\bin\Debug\DnD.exe.config
+F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.exe
+F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.pdb
