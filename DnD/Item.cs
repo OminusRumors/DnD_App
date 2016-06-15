@@ -5,6 +5,7 @@ using System.Text;
 
 namespace DnD
 {
+    [Serializable]
     public class Item
     {
         private string itemName;

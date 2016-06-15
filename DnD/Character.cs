@@ -22,6 +22,11 @@ namespace DnD
         private int[] charStatsMod;
         private int speed;
 
+        public Character()
+        {
+
+        }
+
         public Character(string name, int[] stats, int armor, Weapon weapon, int maxHealth)
         {
             this.charName = name;

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace DnD
 {
+    [Serializable]
     public class Weapon
     {
         private string wepName;
@@ -15,10 +16,10 @@ namespace DnD
         /// </summary>
         private int weapCriticalChance;
         private int weapEffectiveStat;
-        /*
+        
         public Weapon()
         { }
-
+        /*
         public Weapon(int attack)
         {
             this.weapAttack = attack;
