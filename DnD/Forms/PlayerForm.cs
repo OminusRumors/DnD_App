@@ -30,6 +30,7 @@ namespace DnD
             client.sendMessage(msg);
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
+            client.AddMessageDelegate(ServerMessage);
         }
 
         public void ServerMessage(DnDMessage msg)

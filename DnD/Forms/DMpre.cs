@@ -89,7 +89,7 @@ namespace DnD
             
             Game game = new Game(storage);
             game.SetSpawn(spawnx,spawny);
-            DMaft form = new DMaft(game);
+            DMaft form = new DMaft(game,client);
             form.Show();
         }
 
