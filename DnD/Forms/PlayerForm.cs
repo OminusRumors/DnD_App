@@ -13,10 +13,10 @@ namespace DnD
 {
     public partial class PlayerForm : Form
     {
-        DnDClient client;
+        TCPClient client;
         Character character;
         Dictionary<Character, Point> charPositions;
-        public PlayerForm(Character c, DnDClient client)
+        public PlayerForm(Character c, TCPClient client)
         {
             InitializeComponent();
             pbGameGrid.Width = 900;

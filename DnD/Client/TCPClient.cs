@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DnD
 {
-    public class DnDClient
+    public class TCPClient
     {
         private Socket _clientSocket;
 
@@ -27,20 +27,12 @@ namespace DnD
 
         private List<ServerMessageDelegate> messageDelegates = new List<ServerMessageDelegate>();
 
-        public DnDClient(Control control)
+        public TCPClient(Control control)
         {
             this.control = control;
         }
 
-        public DnDClient(Control control, ClientDelegates clientDel)
-        {
-            this.control = control;
-            this.connectDelegate = clientDel.connectedToServer;
-            this.disconnectDelegate = clientDel.disconnectedFromServer;
-            AddMessageDelegate(clientDel.serverMessage);
-        }
-
-        public DnDClient(Control control,ConnectDelegate connectDelegate, DisconnectDelegate disconnectDelegate, ServerMessageDelegate messageDelegate)
+        public TCPClient(Control control,ConnectDelegate connectDelegate, DisconnectDelegate disconnectDelegate, ServerMessageDelegate messageDelegate)
         {
             this.control = control;
             this.connectDelegate = connectDelegate;

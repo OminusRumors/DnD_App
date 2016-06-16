@@ -16,15 +16,13 @@ namespace DnD
 {
     public partial class MainForm : Form
     {
-        DnDClient client;
-        ClientDelegates clientdelegates;
+        TCPClient client;
 
         public MainForm()
         {
             InitializeComponent();
             //this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
-            clientdelegates = new ClientDelegates();
         }
 
         private void btnStartGame_Click(object sender, EventArgs e)
@@ -37,7 +35,7 @@ namespace DnD
         {
             SaveLoadCharacter slc = new SaveLoadCharacter();
             string address = tbIP.Text;
-            client = new DnDClient(this, clientdelegates);
+            client = new TCPClient(this);
             client.connectTo(address);
             Character c = slc.DeSerializeObject<Character>("../Debug/"+lbChar.SelectedItem.ToString());
             PlayerForm pf = new PlayerForm(c, client);

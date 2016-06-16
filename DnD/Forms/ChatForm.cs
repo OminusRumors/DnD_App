@@ -12,9 +12,9 @@ namespace DnD.Forms
 {
     public partial class ChatForm : Form
     {
-        DnDClient client;
+        TCPClient client;
 
-        public ChatForm(DnDClient client)
+        public ChatForm(TCPClient client)
         {
             InitializeComponent();
             this.client = client;

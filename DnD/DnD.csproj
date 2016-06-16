@@ -49,9 +49,8 @@
   <ItemGroup>
     <Compile Include="Armor.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Client\ClientDelegates.cs" />
     <Compile Include="Dice.cs" />
-    <Compile Include="Client\DnDClient.cs" />
+    <Compile Include="Client\TCPClient.cs" />
     <Compile Include="DnDMessage.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="Forms\DMaft.cs">
