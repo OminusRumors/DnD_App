@@ -40,6 +40,7 @@ namespace DnD
             client.connectTo(address);
             Character c = slc.DeSerializeObject<Character>("../Debug/"+lbChar.SelectedItem.ToString());
             PlayerForm pf = new PlayerForm(c, client);
+            pf.Show();
         }
 
         private void btnCreateChar_Click(object sender, EventArgs e)

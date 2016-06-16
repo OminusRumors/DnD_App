@@ -24,6 +24,10 @@ namespace DnD
             this.storage = storage;
         }
 
+        public IObject[,] Storage
+        {
+            get { return storage; }
+        }
         public Dictionary<Trap, Point> TrapPosList
         {
             get { return trapPosList; }

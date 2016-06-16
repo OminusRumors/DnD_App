@@ -62,8 +62,11 @@ namespace DnD
                 {
                     stats[i] = Convert.ToInt32(msg.Properties[i.ToString()]);
                 }
+
+                DnDMessage response = DnDMessage.createWithText("hello )");
+                client.Send(response.ToByteArray());
                 //Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
-                   // Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
+                // Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
                 //game.AddCharacter(character);
             }
             else if (action=="weapon")
@@ -77,13 +80,13 @@ namespace DnD
             {
                 Point point = new Point(Convert.ToInt32(msg.Properties["x"]), Convert.ToInt32(msg.Properties["y"]));
                 Character c = game.GetCharacter(point);
-                bool result = game.Attack(game.CurrentCharacter, c, 10);
+                /*bool result = game.Attack(game.CurrentCharacter, c, 10);
                 if (result)
                 {
                     DnDMessage resp = new DnDMessage("update_health", new Dictionary<string, string> { { "health", c.CharHealth.ToString() } });
                     Socket defender = playerListIP[c];
                     defender.Send(resp.ToByteArray());
-                }
+                }*/
             }
             else if (action == "move_player")
             {

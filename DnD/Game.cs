@@ -10,11 +10,11 @@ namespace DnD
 {
     public class Game
     {
-        
+
         Dictionary<Character, Point> charList;
         Dictionary<Character, Point> npcList;
         Dictionary<Trap, Point> trapList;
-        
+
         Character currentPlayer;
         Map map;
         Dice dice;
@@ -92,7 +92,7 @@ namespace DnD
 
         public void SetSpawn(int spawnx, int spawny)
         {
-            map.SpawnLoc(spawnx,spawny);
+            map.SpawnLoc(spawnx, spawny);
         }
 
         public void AddCharacter(Character character, Point point)
@@ -165,7 +165,7 @@ namespace DnD
             Character c = charList.First(t => t.Key == character).Key;
             charList[c] = newPosition;
         }
-
+        /*
         /// <summary>
         /// Implements an attack between 2 characters.
         /// Checks the range of weapons, evading chance and critical hits.
@@ -208,5 +208,128 @@ namespace DnD
                 return false;
             }
         }
+        */
+        public string Attack(int x, int y)
+        {
+            IObject obj = map.Storage[x, y];
+            if (obj is Character)
+            {
+                Character c = (Character)obj;
+                int hitCheck = c.CharArmor + c.CharStatsMod.dex;
+                int damageroll = dice.Roll(20) + currentPlayer.CharStatsMod.str;
+                if (hitCheck < damageroll)
+                {
+                    int damage = currentPlayer.GetDamage();
+                    if (damageroll - currentPlayer.CharStatsMod.str < currentPlayer.CharWeapon.WeapCriticalChance)
+                    {
+                        damage = damage * 2;
+                    }
+                    c.CharHealth = c.CharHealth - damage;
+                    return ("Dealt " + damage + " to target.");
+                }
+                return ("Swing and a miss");
+            }
+            return ("Selected object is not a attackable object.");
+
+        }
+
+        
+        private static Tuple<int, int> Cordinates<T>( T[,] matrix, T value)
+        {
+            int w = matrix.GetLength(0); // width
+            int h = matrix.GetLength(1); // height
+
+            for (int x = 0; x < w; ++x)
+            {
+                for (int y = 0; y < h; ++y)
+                {
+                    if (matrix[x, y].Equals(value))
+                        return Tuple.Create(x, y);
+                }
+            }
+
+            return Tuple.Create(-1, -1);
+        }
+        
+        public string Move(int des_x, int des_y)
+        {
+            int nrmove = currentPlayer.Speed / 5;
+            foreach (IObject obj in map.Storage)
+            {
+                if (obj == currentPlayer)
+                {
+                    Tuple<int, int> pos = Cordinates<IObject>(map.Storage, obj);
+                    if (MoveCharacter(des_x, des_y, pos.Item1, pos.Item2, nrmove))
+                    {
+                        return "You have moved!";
+                    }
+
+                }
+            }
+            return "You can not move like that!";
+        }
+        private bool CheckValid(int x, int y)
+        {
+            if (x < 0 || y < 0 || x > 20 || y > 11)
+                return false;
+            return true;
+        }
+
+        private bool MoveCharacter(int desx, int desy, int startx, int starty, int distance)
+        {
+            int tempdist = 0;
+            if (Math.Abs(startx - desx) + Math.Abs(starty - desy) > distance)
+                return false;
+            while (tempdist < distance)
+            {
+                List<Point> history = new List<Point> { };
+                List<Point> toCheck = new List<Point> { };
+                if (toCheck.Contains(new Point(desx, desy)))
+                    return true;
+                List<Point> tempCheck = new List<Point> { };
+
+                foreach (Point p in toCheck)
+                {   
+                    startx = p.X;
+                    starty = p.Y;
+                    for (int i = startx - 1; i <= startx + 1; i = i + 2)
+                    {
+                        if (CheckValid(i, starty))
+                        {
+                            if (map.Storage[i, starty] == null)
+                            {
+                                if (!history.Contains(new Point(i, starty)))
+                                {
+                                    tempCheck.Add(new Point(i, starty));
+
+                                }
+                            }
+                        }
+                    }
+                    for (int j = starty - 1; j <= starty + 1; j = j + 2)
+                    {
+                        if (CheckValid(startx, j))
+                        {
+                            if (map.Storage[startx, j] == null)
+                            {
+                                if (!history.Contains(new Point(startx, j)))
+                                {
+                                    tempCheck.Add(new Point(startx, j));
+                                }
+                            }
+                        }
+                    }
+
+                }
+                history.AddRange(toCheck);
+                toCheck.Clear();
+                toCheck.AddRange(tempCheck);
+                tempdist++;
+                tempCheck.Clear();
+
+            }
+            return false;
+        }
     }
 }
+

@@ -25,6 +25,7 @@ namespace DnD
             this.client = client;
             DnDMessage msg = new DnDMessage("initialize_player", character.ToDictionary());
             client.sendMessage(msg);
+            MessageBox.Show(c.CharName);
             msg = new DnDMessage("weapon", character.CharWeapon.ToDictionary());
             client.sendMessage(msg);
             this.TopMost = true;
