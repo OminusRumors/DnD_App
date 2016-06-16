@@ -29,7 +29,7 @@ namespace DnD
         {
             map = new Map(storage);
         }
-        /*
+        
         public Game(Dictionary<Character, Point> charPosList)
         {
             map = new Map();
@@ -45,7 +45,7 @@ namespace DnD
             charList = charPosList;
             trapList = trapPosList;
         }
-        */
+        
         public void AddWeapon(Weapon weapon)
         {
             //Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.Player).Key;
@@ -99,6 +99,8 @@ namespace DnD
         {
             charList.Add(character, point);
         }
+
+        public Character 
 
         /// <summary>
         /// Gets the closest player's character from the point.

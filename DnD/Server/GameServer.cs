@@ -46,7 +46,8 @@ namespace DnD
 
                 DnDMessage response = DnDMessage.createWithText(text + " :)");
                 client.Send(response.ToByteArray());
-            }else if (action == "chat_message")
+            }
+            else if (action == "chat_message")
             {
                 server.SendToAll(msg.ToByteArray());
             }
@@ -59,6 +60,24 @@ namespace DnD
             {
                 DnDMessage response = DnDMessage.createWithText(msg.Action + ": Invalid request\n");
                 client.Send(response.ToByteArray());
+            }
+            else if (action == "end_turn")
+            {
+                Character c = game.NextPlayer();
+                foreach (Character cha in game.CharList.Keys)
+                {
+                    client = playerListIP[cha];
+                    if (cha != c)
+                    {
+                        DnDMessage resp = new DnDMessage("not_your_turn");
+                        client.Send(resp.ToByteArray());
+                    }
+                    else
+                    {
+                        DnDMessage resp = new DnDMessage("your_turn");
+                        client.Send(resp.ToByteArray());
+                    }
+                }
             }
             else if (action == "initilize_player")
             {
@@ -74,9 +93,10 @@ namespace DnD
                 // Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
                 //game.AddCharacter(character);
             }
-            else if (action=="weapon")
+            else if (action == "weapon")
             {
-                Weapon weapon = new Weapon(msg.Properties["player"], Convert.ToInt32(msg.Properties["attack"]),
+                Weapon weapon = new Weapon(msg.Properties["player"], msg.Properties["weapon"],
+                    Convert.ToInt32(msg.Properties["attack"]),
                     Convert.ToInt32(msg.Properties["range"]), Convert.ToInt32(msg.Properties["critical"]),
                     Convert.ToInt32(msg.Properties["effective"]));
                 game.AddWeapon(weapon);

@@ -63,3 +63,4 @@ F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.csproj.Ge
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.exe
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.pdb
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Forms.ChatForm.resources

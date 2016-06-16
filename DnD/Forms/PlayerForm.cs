@@ -32,6 +32,18 @@ namespace DnD
             this.WindowState = FormWindowState.Maximized;
         }
 
+        public void ServerMessage(DnDMessage msg)
+        {
+            if (msg.Action=="not_your_turn")
+            {
+                //deactivate what is not needed while it's not the player's turn
+            }
+            else if(msg.Action=="your_turn")
+            {
+                //activate the form controls
+            }
+        }
+
         public Character Character
         {
             set { this.character = value; }

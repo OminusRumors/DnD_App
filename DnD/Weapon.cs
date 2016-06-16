@@ -8,6 +8,10 @@ namespace DnD
     [Serializable]
     public class Weapon
     {
+        /// <summary>
+        /// we need the player parameter to know to which player the weapon belongs
+        /// </summary>
+        private string player;
         private string wepName;
         private int weapAttack;
         private int weapRange;
@@ -17,7 +21,7 @@ namespace DnD
         public Weapon()
         { }
 
-        public Weapon(string wepName, int attack, int range, int critChance, int effStat)
+        public Weapon(string player, string wepName, int attack, int range, int critChance, int effStat)
         {
             this.wepName = wepName;
             this.weapAttack = attack;
@@ -29,12 +33,18 @@ namespace DnD
         public Dictionary<string, string> ToDictionary()
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("player", player.ToString());
             dict.Add("weapon", wepName);
             dict.Add("attack", weapAttack.ToString());
             dict.Add("range", weapRange.ToString());
             dict.Add("critical", weapCriticalChance.ToString());
             dict.Add("effective", weapEffectiveStat.ToString());
             return dict;
+        }
+
+        public string Player
+        {
+            get { return player; }
         }
 
         public string WepName
