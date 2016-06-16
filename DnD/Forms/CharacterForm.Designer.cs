@@ -346,6 +346,7 @@
             this.tbChar.Location = new System.Drawing.Point(140, 530);
             this.tbChar.Margin = new System.Windows.Forms.Padding(5);
             this.tbChar.Name = "tbChar";
+            this.tbChar.ReadOnly = true;
             this.tbChar.Size = new System.Drawing.Size(80, 22);
             this.tbChar.TabIndex = 15;
             // 
@@ -354,6 +355,7 @@
             this.tbwis.Location = new System.Drawing.Point(140, 454);
             this.tbwis.Margin = new System.Windows.Forms.Padding(5);
             this.tbwis.Name = "tbwis";
+            this.tbwis.ReadOnly = true;
             this.tbwis.Size = new System.Drawing.Size(80, 22);
             this.tbwis.TabIndex = 14;
             // 
@@ -362,6 +364,7 @@
             this.tbInt.Location = new System.Drawing.Point(140, 385);
             this.tbInt.Margin = new System.Windows.Forms.Padding(5);
             this.tbInt.Name = "tbInt";
+            this.tbInt.ReadOnly = true;
             this.tbInt.Size = new System.Drawing.Size(80, 22);
             this.tbInt.TabIndex = 13;
             // 
@@ -370,6 +373,7 @@
             this.tbCons.Location = new System.Drawing.Point(140, 309);
             this.tbCons.Margin = new System.Windows.Forms.Padding(5);
             this.tbCons.Name = "tbCons";
+            this.tbCons.ReadOnly = true;
             this.tbCons.Size = new System.Drawing.Size(80, 22);
             this.tbCons.TabIndex = 12;
             // 
@@ -378,6 +382,7 @@
             this.tbDex.Location = new System.Drawing.Point(140, 231);
             this.tbDex.Margin = new System.Windows.Forms.Padding(5);
             this.tbDex.Name = "tbDex";
+            this.tbDex.ReadOnly = true;
             this.tbDex.Size = new System.Drawing.Size(80, 22);
             this.tbDex.TabIndex = 11;
             // 
@@ -386,6 +391,7 @@
             this.tbStrength.Location = new System.Drawing.Point(140, 156);
             this.tbStrength.Margin = new System.Windows.Forms.Padding(5);
             this.tbStrength.Name = "tbStrength";
+            this.tbStrength.ReadOnly = true;
             this.tbStrength.Size = new System.Drawing.Size(80, 22);
             this.tbStrength.TabIndex = 10;
             // 

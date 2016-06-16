@@ -40,7 +40,7 @@
             this.lbChar.FormattingEnabled = true;
             this.lbChar.ItemHeight = 16;
             this.lbChar.Location = new System.Drawing.Point(63, 68);
-            this.lbChar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbChar.Margin = new System.Windows.Forms.Padding(4);
             this.lbChar.Name = "lbChar";
             this.lbChar.Size = new System.Drawing.Size(283, 244);
             this.lbChar.TabIndex = 0;
@@ -49,7 +49,7 @@
             // tbIP
             // 
             this.tbIP.Location = new System.Drawing.Point(63, 334);
-            this.tbIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIP.Margin = new System.Windows.Forms.Padding(4);
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(283, 22);
             this.tbIP.TabIndex = 2;
@@ -60,7 +60,7 @@
             this.btnStartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartGame.Location = new System.Drawing.Point(605, 223);
-            this.btnStartGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStartGame.Margin = new System.Windows.Forms.Padding(4);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(123, 37);
             this.btnStartGame.TabIndex = 4;
@@ -70,10 +70,11 @@
             // 
             // btnCreateChar
             // 
+            this.btnCreateChar.BackgroundImage = global::DnD.Properties.Resources.btn_1;
+            this.btnCreateChar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCreateChar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateChar.Image = global::DnD.Properties.Resources.btn_1;
             this.btnCreateChar.Location = new System.Drawing.Point(373, 165);
-            this.btnCreateChar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateChar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateChar.Name = "btnCreateChar";
             this.btnCreateChar.Size = new System.Drawing.Size(123, 59);
             this.btnCreateChar.TabIndex = 3;
@@ -87,7 +88,7 @@
             this.btnJoin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJoin.Location = new System.Drawing.Point(140, 377);
-            this.btnJoin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnJoin.Margin = new System.Windows.Forms.Padding(4);
             this.btnJoin.Name = "btnJoin";
             this.btnJoin.Size = new System.Drawing.Size(123, 37);
             this.btnJoin.TabIndex = 1;
@@ -100,13 +101,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DnD.Properties.Resources.wood;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(856, 500);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.btnCreateChar);
             this.Controls.Add(this.tbIP);
             this.Controls.Add(this.btnJoin);
             this.Controls.Add(this.lbChar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "DnD";
             this.Activated += new System.EventHandler(this.MainForm_Activated);

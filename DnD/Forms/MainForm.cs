@@ -21,6 +21,8 @@ namespace DnD
         public MainForm()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
             clientdelegates = new ClientDelegates();
         }
 

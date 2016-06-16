@@ -32,6 +32,8 @@ namespace DnD
         public DMpre()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
             serverDelegates = new ServerDelegates();
             server = new DnDServer(this, serverDelegates);
             server.setLogDelegate(serverDelegates.handleServerLog);

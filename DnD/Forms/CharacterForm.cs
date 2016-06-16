@@ -30,6 +30,8 @@ namespace DnD
         public CharacterForm()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
             RefreshTextBox();
 
             XmlTextReader readClass = new XmlTextReader("Class.xml");

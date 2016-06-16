@@ -13,14 +13,14 @@ namespace DnD
 {
     public partial class DMaft : Form
     {
-        Character npc1;
-        Character npc2;
-        Trap trap1;
-        Trap trap2;
         public DMaft(DnDServer server, Game game)
         {
             InitializeComponent();
-            int[] stats = new int[] { 4, 4, 4, 4, 4, 4 };
+            pbGameGrid.Width = 900;
+            pbGameGrid.Height = 495;
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
+            //int[] stats = new int[] { 4, 4, 4, 4, 4, 4 };
             //npc1 = new Character("npc1", stats, 4, new Weapon(5, 2, 3, 2), 100);
             //npc2 = new Character("npc2", stats, 5, new Weapon(6, 1, 2, 1), 100);
             //trap1 = new Trap(0, 4, 2);

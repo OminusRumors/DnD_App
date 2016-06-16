@@ -19,12 +19,16 @@ namespace DnD
         public PlayerForm(Character c, DnDClient client)
         {
             InitializeComponent();
+            pbGameGrid.Width = 900;
+            pbGameGrid.Height = 495;
             this.character = c;
             this.client = client;
             DnDMessage msg = new DnDMessage("initialize_player", character.ToDictionary());
             client.sendMessage(msg);
             msg = new DnDMessage("weapon", character.CharWeapon.ToDictionary());
             client.sendMessage(msg);
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public Character Character
