@@ -1,5 +1,6 @@
 ﻿using DnD;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
@@ -23,7 +24,8 @@ namespace DnD
 
         public ConnectDelegate connectDelegate { get; set; } 
         public DisconnectDelegate disconnectDelegate { get; set; }
-        public ServerMessageDelegate messageDelegate { get; set; }
+
+        private List<ServerMessageDelegate> messageDelegates = new List<ServerMessageDelegate>();
 
         public DnDClient(Control control)
         {
@@ -35,7 +37,7 @@ namespace DnD
             this.control = control;
             this.connectDelegate = clientDel.connectedToServer;
             this.disconnectDelegate = clientDel.disconnectedFromServer;
-            this.messageDelegate = clientDel.serverMessage;
+            AddMessageDelegate(clientDel.serverMessage);
         }
 
         public DnDClient(Control control,ConnectDelegate connectDelegate, DisconnectDelegate disconnectDelegate, ServerMessageDelegate messageDelegate)
@@ -43,7 +45,17 @@ namespace DnD
             this.control = control;
             this.connectDelegate = connectDelegate;
             this.disconnectDelegate = disconnectDelegate;
-            this.messageDelegate = messageDelegate;
+            AddMessageDelegate(messageDelegate);
+        }
+
+        public void AddMessageDelegate(ServerMessageDelegate del)
+        {
+            messageDelegates.Add(del);
+        }
+
+        public void RemoveMessageDelegate(ServerMessageDelegate del)
+        {
+            messageDelegates.Remove(del);
         }
 
         internal void connectTo(string address)
@@ -96,7 +108,7 @@ namespace DnD
             if (received > 0)
             {
                 DnDMessage message = DnDMessage.createFromByteArray(recBuf);
-                invokeDelegate(messageDelegate, message);
+                invokeMessageDelegates(messageDelegates, message);
             }
             else
             {
@@ -151,6 +163,23 @@ namespace DnD
                     });
                 }
                 catch (ObjectDisposedException) { }
+            }
+        }
+
+        private void invokeMessageDelegates(List<ServerMessageDelegate> listDel, params object[] args)
+        {
+            foreach (ServerMessageDelegate del in listDel)
+            {
+                if (del != null)
+                {
+                    try
+                    {
+                        control.Invoke((MethodInvoker)delegate {
+                            del.DynamicInvoke(args);
+                        });
+                    }
+                    catch (ObjectDisposedException) { }
+                }
             }
         }
 

@@ -11,22 +11,24 @@ namespace DnD
 {
     public class ServerDelegates
     {
+        DnDServer server;
         Game game;
         Dictionary<Character, Socket> playerListIP;
+
         public ServerDelegates()
         {
             game = new Game();
+            server = new DnDServer(this);
             playerListIP = new Dictionary<Character, Socket>();
         }
 
-        public void StartServer(DnDServer server)
+        public void StartServer()
         {
             server.start();
         }
-        public void clientConnected(Socket client, Character player)
+        public void clientConnected(Socket client)
         {
             string ip = DnDServer.GetIPAddressFromSocket(client);
-            playerListIP.Add(player, client);
         }
 
         public void clientDisconnected(Socket client)
@@ -44,6 +46,9 @@ namespace DnD
 
                 DnDMessage response = DnDMessage.createWithText(text + " :)");
                 client.Send(response.ToByteArray());
+            }else if (action == "chat_message")
+            {
+                server.SendToAll(msg.ToByteArray());
             }
             else if (action == "time")
             {

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnD;
 using System.IO;
+using DnD.Forms;
 
 namespace DnD
 {
@@ -51,7 +52,7 @@ namespace DnD
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void lbChar_SelectedIndexChanged(object sender, EventArgs e)

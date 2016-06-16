@@ -18,38 +18,34 @@ namespace DnD
         private const int _PORT = 100;
         private static readonly byte[] _buffer = new byte[_BUFFER_SIZE];
 
-        public delegate void ClientConnectDelegate(Socket client,Character player);
+        public delegate void ClientConnectDelegate(Socket client);
         public delegate void ClientDisconnectDelegate(Socket client);
         public delegate void ClientMessageDelegate(Socket client, DnDMessage message);
 
         public delegate void ServerLogDelegate(string message, ListBox listBox);
 
-        Control control;
         ClientMessageDelegate messageDelegate;
         ClientConnectDelegate connectDelegate;
         ClientDisconnectDelegate disconnectDelegate;
         ServerLogDelegate logDelegate;
 
-        public DnDServer(Control control)
+        public DnDServer()
         {
-            this.control = control;
         }
 
-        public DnDServer(Control control, ServerDelegates serverDelegates)
+        public DnDServer(ServerDelegates serverDelegates)
         {
-            this.control = control;
             this.messageDelegate = serverDelegates.clientMessage;
             this.connectDelegate = serverDelegates.clientConnected;
             this.disconnectDelegate = serverDelegates.clientDisconnected;
         }
 
-        public DnDServer(Control control, ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
+        public DnDServer(ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
             ClientMessageDelegate listener)
         {
             this.messageDelegate = listener;
             this.disconnectDelegate = disconnectDelegate;
             this.connectDelegate = connectDelegate;
-            this.control = control;
         }
 
         public void setClientConnectDelegate(ClientConnectDelegate connectDelegate)
@@ -218,13 +214,12 @@ namespace DnD
 
         private void invokeDelegate(Delegate del, params object[] args)
         {
+
             if (del != null)
             {
                 try
                 {
-                    control.Invoke((MethodInvoker)delegate {
-                        del.DynamicInvoke(args);
-                    });
+                    del.DynamicInvoke(args);
                 }
                 catch (ObjectDisposedException) { }
             }
