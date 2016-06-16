@@ -223,7 +223,7 @@ namespace DnD
                 try
                 {
                     control.Invoke((MethodInvoker)delegate {
-                        del.DynamicInvoke(args);
+                        //del.DynamicInvoke(args);
                     });
                 }
                 catch (ObjectDisposedException) { }

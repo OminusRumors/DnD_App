@@ -5,24 +5,25 @@ using System.Text;
 
 namespace DnD
 {
-    public class Trap
+    public class Trap : IObject
     {
-        private int trapId;
+        private string trapId;
         private int trapDamage;
-        private int trapVisibility;
+        private bool trapVisibility;
         private bool trapTraversible;
 
         public Trap()
         { }
 
-        public Trap(int id, int damage, int visibility)
+        public Trap(string id, int damage, bool visibility,bool traversal)
         {
             this.trapId = id;
             this.trapDamage = damage;
             this.trapVisibility = visibility;
+            this.trapTraversible = traversal;
         }
 
-        public int TrapId
+        public string TrapId
         {
             get { return trapId; }
             set { trapId = value; }
@@ -34,7 +35,7 @@ namespace DnD
             set { trapDamage = value; }
         }
 
-        public int TrapVisibility
+        public bool TrapVisibility
         {
             get { return trapVisibility; }
             set { trapVisibility = value; }

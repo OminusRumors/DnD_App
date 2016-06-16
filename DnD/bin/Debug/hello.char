@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Character xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CharArmor>4</CharArmor>
+  <CharName>hello</CharName>
+  <CharHealth>6</CharHealth>
+  <CharMaxHealth>6</CharMaxHealth>
+  <CharWeapon>
+    <WepName>Quarter Staff</WepName>
+    <WeapAttack>4</WeapAttack>
+    <WeapRange>10</WeapRange>
+    <WeapCriticalChance>20</WeapCriticalChance>
+    <WeapEffStat>4</WeapEffStat>
+  </CharWeapon>
+  <CharStats>
+    <str>8</str>
+    <dex>10</dex>
+    <con>8</con>
+    <intel>9</intel>
+    <wis>8</wis>
+    <charis>8</charis>
+  </CharStats>
+  <CharStatsMod>
+    <str>-2</str>
+    <dex>0</dex>
+    <con>-2</con>
+    <intel>-1</intel>
+    <wis>-2</wis>
+    <charis>-2</charis>
+  </CharStatsMod>
+  <Speed>40</Speed>
+</Character>

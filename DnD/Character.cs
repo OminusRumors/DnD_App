@@ -8,7 +8,7 @@ namespace DnD
 
     // enum Race { human, elf, orc }
     [Serializable]
-    public class Character
+    public class Character:IObject
     {
 
         private string charName;

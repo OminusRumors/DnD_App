@@ -126,10 +126,16 @@ namespace DnD
                 }
                 return true;
             }
+            if (points<=0)
+            {
+                return false;
+            }
             if (value > 12 && points < 2)
             {
                 return false;
             }
+            if (value > 15 && points < 3)
+                return false;
             return true;
         }
 
@@ -312,10 +318,22 @@ namespace DnD
             if (int.TryParse(tbLevel.Text, out value))
             {
                 points = 25 + value * 2;
+                str = 8;
+                dex = 8;
+                con = 8;
+                intel = 8;
+                wis = 8;
+                charis = 8;
             }
             else
             {
                 points = 25;
+                str = 8;
+                dex = 8;
+                con = 8;
+                intel = 8;
+                wis = 8;
+                charis = 8;
             }
             RefreshTextBox();
         }
