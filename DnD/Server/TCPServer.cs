@@ -9,7 +9,7 @@ using DnD;
 
 namespace DnD
 {
-    public class DnDServer
+    public class TCPServer
     {
 
         private static Socket _serverSocket;
@@ -29,18 +29,18 @@ namespace DnD
         ClientDisconnectDelegate disconnectDelegate;
         ServerLogDelegate logDelegate;
 
-        public DnDServer()
+        public TCPServer()
         {
         }
 
-        public DnDServer(ServerDelegates serverDelegates)
+        public TCPServer(Server serverDelegates)
         {
             this.messageDelegate = serverDelegates.clientMessage;
             this.connectDelegate = serverDelegates.clientConnected;
             this.disconnectDelegate = serverDelegates.clientDisconnected;
         }
 
-        public DnDServer(ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
+        public TCPServer(ClientConnectDelegate connectDelegate, ClientDisconnectDelegate disconnectDelegate,
             ClientMessageDelegate listener)
         {
             this.messageDelegate = listener;

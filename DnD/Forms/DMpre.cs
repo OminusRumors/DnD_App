@@ -22,8 +22,7 @@ namespace DnD
         int gridWidth=20;
         int gridHeight=11;
         SaveLoadCharacter slc = new SaveLoadCharacter();
-        DnDServer server;
-        ServerDelegates serverDelegates;
+        Server server;
         int spawny = 0;
         int spawnx = 0;
         EventHandler click;
@@ -34,10 +33,11 @@ namespace DnD
             InitializeComponent();
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
-            serverDelegates = new ServerDelegates();
-            server.setLogDelegate(serverDelegates.handleServerLog);
+
+            server = new Server();
             lbHostIp.Text = server.GetLocalIPAddress();
-            server.start();
+            server.StartServer();
+
             storage = new IObject[gridWidth, gridHeight];
             pbGameGrid.Width = 900;
             pbGameGrid.Height = 495;
@@ -89,7 +89,7 @@ namespace DnD
             
             Game game = new Game(storage);
             game.SetSpawn(spawnx,spawny);
-            DMaft form = new DMaft(server, game);
+            DMaft form = new DMaft(game);
             form.Show();
         }
 
@@ -265,6 +265,11 @@ namespace DnD
 
             }
             pbGameGrid.Invalidate();
+        }
+
+        private void DMpre_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

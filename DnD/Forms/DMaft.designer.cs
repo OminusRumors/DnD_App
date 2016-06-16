@@ -67,7 +67,7 @@
             this.lbSelectedInfo.FormattingEnabled = true;
             this.lbSelectedInfo.ItemHeight = 16;
             this.lbSelectedInfo.Location = new System.Drawing.Point(52, 30);
-            this.lbSelectedInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbSelectedInfo.Margin = new System.Windows.Forms.Padding(4);
             this.lbSelectedInfo.Name = "lbSelectedInfo";
             this.lbSelectedInfo.Size = new System.Drawing.Size(231, 52);
             this.lbSelectedInfo.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.lbTurnOrder.FormattingEnabled = true;
             this.lbTurnOrder.ItemHeight = 16;
             this.lbTurnOrder.Location = new System.Drawing.Point(52, 122);
-            this.lbTurnOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbTurnOrder.Margin = new System.Windows.Forms.Padding(4);
             this.lbTurnOrder.Name = "lbTurnOrder";
             this.lbTurnOrder.Size = new System.Drawing.Size(231, 228);
             this.lbTurnOrder.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.lbLog.FormattingEnabled = true;
             this.lbLog.ItemHeight = 16;
             this.lbLog.Location = new System.Drawing.Point(52, 383);
-            this.lbLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbLog.Margin = new System.Windows.Forms.Padding(4);
             this.lbLog.Name = "lbLog";
             this.lbLog.Size = new System.Drawing.Size(231, 228);
             this.lbLog.TabIndex = 2;
@@ -132,7 +132,7 @@
             // 
             this.cbSpells.FormattingEnabled = true;
             this.cbSpells.Location = new System.Drawing.Point(320, 769);
-            this.cbSpells.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSpells.Margin = new System.Windows.Forms.Padding(4);
             this.cbSpells.Name = "cbSpells";
             this.cbSpells.Size = new System.Drawing.Size(136, 24);
             this.cbSpells.TabIndex = 7;
@@ -141,7 +141,7 @@
             // 
             this.cbSkills.FormattingEnabled = true;
             this.cbSkills.Location = new System.Drawing.Point(320, 818);
-            this.cbSkills.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSkills.Margin = new System.Windows.Forms.Padding(4);
             this.cbSkills.Name = "cbSkills";
             this.cbSkills.Size = new System.Drawing.Size(136, 24);
             this.cbSkills.TabIndex = 9;
@@ -149,7 +149,7 @@
             // tbChangeHealth
             // 
             this.tbChangeHealth.Location = new System.Drawing.Point(137, 675);
-            this.tbChangeHealth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbChangeHealth.Margin = new System.Windows.Forms.Padding(4);
             this.tbChangeHealth.Name = "tbChangeHealth";
             this.tbChangeHealth.Size = new System.Drawing.Size(67, 22);
             this.tbChangeHealth.TabIndex = 10;
@@ -157,7 +157,7 @@
             // tbActionPoints
             // 
             this.tbActionPoints.Location = new System.Drawing.Point(320, 678);
-            this.tbActionPoints.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbActionPoints.Margin = new System.Windows.Forms.Padding(4);
             this.tbActionPoints.Name = "tbActionPoints";
             this.tbActionPoints.ReadOnly = true;
             this.tbActionPoints.Size = new System.Drawing.Size(51, 22);
@@ -166,7 +166,7 @@
             // tbDice
             // 
             this.tbDice.Location = new System.Drawing.Point(137, 733);
-            this.tbDice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDice.Margin = new System.Windows.Forms.Padding(4);
             this.tbDice.Name = "tbDice";
             this.tbDice.Size = new System.Drawing.Size(67, 22);
             this.tbDice.TabIndex = 12;
@@ -177,7 +177,7 @@
             this.btnChangeHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnChangeHealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeHealth.Location = new System.Drawing.Point(214, 674);
-            this.btnChangeHealth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangeHealth.Margin = new System.Windows.Forms.Padding(4);
             this.btnChangeHealth.Name = "btnChangeHealth";
             this.btnChangeHealth.Size = new System.Drawing.Size(69, 28);
             this.btnChangeHealth.TabIndex = 13;
@@ -191,7 +191,7 @@
             this.btnEndTurn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEndTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnEndTurn.Location = new System.Drawing.Point(804, 719);
-            this.btnEndTurn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEndTurn.Margin = new System.Windows.Forms.Padding(4);
             this.btnEndTurn.Name = "btnEndTurn";
             this.btnEndTurn.Size = new System.Drawing.Size(142, 75);
             this.btnEndTurn.TabIndex = 14;
@@ -204,7 +204,7 @@
             this.btnRoll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoll.Location = new System.Drawing.Point(214, 733);
-            this.btnRoll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRoll.Margin = new System.Windows.Forms.Padding(4);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(65, 28);
             this.btnRoll.TabIndex = 15;
@@ -253,7 +253,7 @@
             this.btnCastSpell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCastSpell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCastSpell.Location = new System.Drawing.Point(478, 766);
-            this.btnCastSpell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCastSpell.Margin = new System.Windows.Forms.Padding(4);
             this.btnCastSpell.Name = "btnCastSpell";
             this.btnCastSpell.Size = new System.Drawing.Size(81, 28);
             this.btnCastSpell.TabIndex = 20;
@@ -266,7 +266,7 @@
             this.btnCastSkill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCastSkill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCastSkill.Location = new System.Drawing.Point(478, 816);
-            this.btnCastSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCastSkill.Margin = new System.Windows.Forms.Padding(4);
             this.btnCastSkill.Name = "btnCastSkill";
             this.btnCastSkill.Size = new System.Drawing.Size(81, 28);
             this.btnCastSkill.TabIndex = 21;
@@ -279,7 +279,7 @@
             this.btnMove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMove.Location = new System.Drawing.Point(478, 657);
-            this.btnMove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMove.Margin = new System.Windows.Forms.Padding(4);
             this.btnMove.Name = "btnMove";
             this.btnMove.Size = new System.Drawing.Size(81, 28);
             this.btnMove.TabIndex = 22;
@@ -292,7 +292,7 @@
             this.btnAttack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAttack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAttack.Location = new System.Drawing.Point(478, 706);
-            this.btnAttack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAttack.Margin = new System.Windows.Forms.Padding(4);
             this.btnAttack.Name = "btnAttack";
             this.btnAttack.Size = new System.Drawing.Size(81, 28);
             this.btnAttack.TabIndex = 23;
@@ -314,7 +314,7 @@
             // tbMoveCost
             // 
             this.tbMoveCost.Location = new System.Drawing.Point(632, 660);
-            this.tbMoveCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMoveCost.Margin = new System.Windows.Forms.Padding(4);
             this.tbMoveCost.Name = "tbMoveCost";
             this.tbMoveCost.ReadOnly = true;
             this.tbMoveCost.Size = new System.Drawing.Size(57, 22);
@@ -323,7 +323,7 @@
             // tbAttackCost
             // 
             this.tbAttackCost.Location = new System.Drawing.Point(632, 709);
-            this.tbAttackCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAttackCost.Margin = new System.Windows.Forms.Padding(4);
             this.tbAttackCost.Name = "tbAttackCost";
             this.tbAttackCost.ReadOnly = true;
             this.tbAttackCost.Size = new System.Drawing.Size(57, 22);
@@ -344,7 +344,7 @@
             // tbSpellCost
             // 
             this.tbSpellCost.Location = new System.Drawing.Point(632, 765);
-            this.tbSpellCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSpellCost.Margin = new System.Windows.Forms.Padding(4);
             this.tbSpellCost.Name = "tbSpellCost";
             this.tbSpellCost.ReadOnly = true;
             this.tbSpellCost.Size = new System.Drawing.Size(57, 22);
@@ -365,7 +365,7 @@
             // tbSkillCost
             // 
             this.tbSkillCost.Location = new System.Drawing.Point(632, 816);
-            this.tbSkillCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSkillCost.Margin = new System.Windows.Forms.Padding(4);
             this.tbSkillCost.Name = "tbSkillCost";
             this.tbSkillCost.ReadOnly = true;
             this.tbSkillCost.Size = new System.Drawing.Size(57, 22);
@@ -386,7 +386,7 @@
             // pbGameGrid
             // 
             this.pbGameGrid.Location = new System.Drawing.Point(296, 30);
-            this.pbGameGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbGameGrid.Margin = new System.Windows.Forms.Padding(4);
             this.pbGameGrid.Name = "pbGameGrid";
             this.pbGameGrid.Size = new System.Drawing.Size(1080, 602);
             this.pbGameGrid.TabIndex = 3;
@@ -429,9 +429,10 @@
             this.Controls.Add(this.lbLog);
             this.Controls.Add(this.lbTurnOrder);
             this.Controls.Add(this.lbSelectedInfo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DMaft";
             this.Text = "Dungeon Master In-game";
+            this.Load += new System.EventHandler(this.DMaft_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

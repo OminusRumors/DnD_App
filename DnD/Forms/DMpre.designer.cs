@@ -244,6 +244,7 @@
             this.Name = "DMpre";
             this.Text = "Host";
             this.Activated += new System.EventHandler(this.DMpre_Activated);
+            this.Load += new System.EventHandler(this.DMpre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbGameGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

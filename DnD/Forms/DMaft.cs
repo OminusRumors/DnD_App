@@ -13,7 +13,7 @@ namespace DnD
 {
     public partial class DMaft : Form
     {
-        public DMaft(DnDServer server, Game game)
+        public DMaft(Game game)
         {
             InitializeComponent();
             pbGameGrid.Width = 900;
@@ -25,6 +25,11 @@ namespace DnD
             //npc2 = new Character("npc2", stats, 5, new Weapon(6, 1, 2, 1), 100);
             //trap1 = new Trap(0, 4, 2);
             //trap2 = new Trap(1, 4, 2);
+        }
+
+        private void DMaft_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

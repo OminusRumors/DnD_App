@@ -9,16 +9,16 @@ using System.Windows.Forms;
 
 namespace DnD
 {
-    public class ServerDelegates
+    public class Server
     {
-        DnDServer server;
+        TCPServer server;
         Game game;
         Dictionary<Character, Socket> playerListIP;
 
-        public ServerDelegates()
+        public Server()
         {
             game = new Game();
-            server = new DnDServer(this);
+            server = new TCPServer(this);
             playerListIP = new Dictionary<Character, Socket>();
         }
 
@@ -28,12 +28,12 @@ namespace DnD
         }
         public void clientConnected(Socket client)
         {
-            string ip = DnDServer.GetIPAddressFromSocket(client);
+            string ip = TCPServer.GetIPAddressFromSocket(client);
         }
 
         public void clientDisconnected(Socket client)
         {
-            string ip = DnDServer.GetIPAddressFromSocket(client);
+            string ip = TCPServer.GetIPAddressFromSocket(client);
         }
 
         public void clientMessage(Socket client, DnDMessage msg)
@@ -41,7 +41,7 @@ namespace DnD
             string action = msg.Action;
             if (action == "text")
             {
-                string ip = DnDServer.GetIPAddressFromSocket(client);
+                string ip = TCPServer.GetIPAddressFromSocket(client);
                 string text = msg.Properties["value"];
 
                 DnDMessage response = DnDMessage.createWithText(text + " :)");
@@ -115,6 +115,11 @@ namespace DnD
                 DnDMessage resp = new DnDMessage("get_char_info", chara.ToDictionary());
                 client.Send(resp.ToByteArray());
             }
+        }
+
+        public string GetLocalIPAddress()
+        {
+            return server.GetLocalIPAddress();
         }
 
         public void handleServerLog(string msg, ListBox lb)

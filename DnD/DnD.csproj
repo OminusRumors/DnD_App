@@ -83,7 +83,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="SaveLoad.cs" />
     <Compile Include="SaveLoadCharacter.cs" />
-    <Compile Include="Server\DnDServer.cs" />
+    <Compile Include="Server\TCPServer.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -100,7 +100,7 @@
     <Compile Include="Map.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server\ServerDelegates.cs" />
+    <Compile Include="Server\Server.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="Trap.cs" />
     <Compile Include="Weapon.cs" />
