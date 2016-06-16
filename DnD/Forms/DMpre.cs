@@ -18,6 +18,7 @@ namespace DnD
     {
         IObject[,] storage;
         IObject tempHolder;
+        Game game;
         List<Trap> traps = new List<Trap> { };
         int gridWidth=20;
         int gridHeight=11;
@@ -51,6 +52,8 @@ namespace DnD
             }
            
             lbHazards.SetSelected(0, true);
+
+            game = new Game();
             //int[] stats = new int[] { 4, 4, 4, 4, 4, 4 };
             //player1 = new Character("player1", stats, 10, new Weapon(10, 2, 3, 2), 200);
             //player2 = new Character("player2", stats, 11, new Weapon(10, 2, 3, 2), 300);
@@ -87,9 +90,8 @@ namespace DnD
             //DMaft form = new DMaft(server, game);
             */
             
-            Game game = new Game(storage);
             game.SetSpawn(spawnx,spawny);
-            DMaft form = new DMaft(game,client);
+            DMaft form = new DMaft(game);
             form.Show();
         }
 

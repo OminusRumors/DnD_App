@@ -34,7 +34,7 @@ namespace DnD
                     stream.Close();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Log exception here
             }

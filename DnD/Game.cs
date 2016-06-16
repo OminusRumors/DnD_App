@@ -100,7 +100,10 @@ namespace DnD
             charList.Add(character, point);
         }
 
-        public Character 
+        public void AddNPC(Character character, Point point)
+        {
+            npcList.Add(character, point);
+        }
 
         /// <summary>
         /// Gets the closest player's character from the point.

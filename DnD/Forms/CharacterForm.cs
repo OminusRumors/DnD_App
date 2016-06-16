@@ -84,7 +84,7 @@ namespace DnD
 
             for (int i = 0; i < items.Count; i = i + 5)
             {
-                weapons.Add(new Weapon(items[i], Convert.ToInt32(items[i + 1]), Convert.ToInt32(items[i + 2]), Convert.ToInt32(items[i + 3]), Convert.ToInt32(items[i + 4])));
+                weapons.Add(new Weapon(tbName.Text, items[i], Convert.ToInt32(items[i + 1]), Convert.ToInt32(items[i + 2]), Convert.ToInt32(items[i + 3]), Convert.ToInt32(items[i + 4])));
                 cmbMain.Items.Add(items[i]);
             }
 
