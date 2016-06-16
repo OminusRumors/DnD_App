@@ -21,9 +21,9 @@ namespace DnD
 
         Control control;
 
-        ConnectDelegate connectDelegate;
-        DisconnectDelegate disconnectDelegate;
-        ServerMessageDelegate messageDelegate;
+        public ConnectDelegate connectDelegate { get; set; } 
+        public DisconnectDelegate disconnectDelegate { get; set; }
+        public ServerMessageDelegate messageDelegate { get; set; }
 
         public DnDClient(Control control)
         {
