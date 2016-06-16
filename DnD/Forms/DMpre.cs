@@ -22,7 +22,7 @@ namespace DnD
         int gridWidth=20;
         int gridHeight=11;
         SaveLoadCharacter slc = new SaveLoadCharacter();
-        Server server;
+        GameServer server;
         int spawny = 0;
         int spawnx = 0;
         EventHandler click;
@@ -34,7 +34,7 @@ namespace DnD
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
 
-            server = new Server();
+            server = new GameServer();
             lbHostIp.Text = server.GetLocalIPAddress();
             server.StartServer();
 

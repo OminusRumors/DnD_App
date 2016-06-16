@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace DnD
 {
-    public class Server
+    public class GameServer
     {
         TCPServer server;
         Game game;
         Dictionary<Character, Socket> playerListIP;
 
-        public Server()
+        public GameServer()
         {
             game = new Game();
             server = new TCPServer(this);

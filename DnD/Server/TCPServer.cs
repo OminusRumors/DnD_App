@@ -33,7 +33,7 @@ namespace DnD
         {
         }
 
-        public TCPServer(Server serverDelegates)
+        public TCPServer(GameServer serverDelegates)
         {
             this.messageDelegate = serverDelegates.clientMessage;
             this.connectDelegate = serverDelegates.clientConnected;
