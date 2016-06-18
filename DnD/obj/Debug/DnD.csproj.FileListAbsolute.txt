@@ -1,65 +1,13 @@
-c:\users\dazle\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.exe.config
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe.config
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.pdb
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Form1.resources
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Form2.resources
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.Properties.Resources.resources
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.exe
-E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.pdb
-C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe.config
-C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.exe
-C:\Users\George II\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\obj\Debug\DnD.pdb
-C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.exe.config
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.exe
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.pdb
-C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.exe
-C:\Users\George II\Desktop\DnD_App\DnD\bin\Debug\DnD.pdb
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.DMaft.resources
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.DMpre.resources
-C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.PlayerForm.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.exe.config
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.exe
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.pdb
-C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.exe
-C:\Users\dazle_000\Documents\DnD_App\DnD\bin\Debug\DnD.pdb
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.DMaft.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.DMpre.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.PlayerForm.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
-C:\Users\dazle_000\Documents\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
-C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.exe.config
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.exe
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.pdb
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.DMaft.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.DMpre.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.PlayerForm.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.MainForm.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.CharacterForm.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.Properties.Resources.resources
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
-C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.exe
-C:\Users\dazle_000\Documents\DnD_App2\DnD\bin\Debug\DnD.pdb
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\bin\Debug\DnD.exe.config
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\bin\Debug\DnD.exe
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\bin\Debug\DnD.pdb
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.DMaft.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.DMpre.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.PlayerForm.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.MainForm.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.CharacterForm.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.Properties.Resources.resources
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.exe
-F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.pdb
-C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+E:\skole\DND\DnD\bin\Debug\DnD.exe.config
+E:\skole\DND\DnD\bin\Debug\DnD.exe
+E:\skole\DND\DnD\bin\Debug\DnD.pdb
+E:\skole\DND\DnD\obj\Debug\DnD.DMaft.resources
+E:\skole\DND\DnD\obj\Debug\DnD.DMpre.resources
+E:\skole\DND\DnD\obj\Debug\DnD.Forms.ChatForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.PlayerForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.MainForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.CharacterForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.Properties.Resources.resources
+E:\skole\DND\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+E:\skole\DND\DnD\obj\Debug\DnD.exe
+E:\skole\DND\DnD\obj\Debug\DnD.pdb
