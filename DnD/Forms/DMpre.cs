@@ -162,7 +162,7 @@ namespace DnD
                 }
             }
 
-            Bitmap spawn = ResizeImage((Bitmap)Image.FromFile("../debug/finished/Pendulum.bmp"), 130, 130);
+            Bitmap spawn = ResizeImage((Bitmap)Image.FromFile("../debug/finished/Tent.bmp"), 130, 130);
             e.Graphics.DrawImage(spawn, new Point(spawnx * cubeWidth + 1, spawny * cubeHeight + 1));
 
             string path = "";

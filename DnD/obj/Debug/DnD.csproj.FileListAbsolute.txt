@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 c:\users\dazle\documents\visual studio 2015\Projects\DnD\DnD\bin\Debug\DnD.exe.config
 E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe.config
 E:\dropbox\Dropbox\ProEp D&D project\DnDUI\DnD\DnD\bin\Debug\DnD.exe
@@ -64,3 +65,18 @@ F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.exe
 F:\fontys files\third year\ProEP\DownloadGit\DnD_App\DnD\obj\Debug\DnD.pdb
 C:\Users\dazle_000\Documents\DnD_App2\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
 C:\Users\George II\Desktop\DnD_App\DnD\obj\Debug\DnD.Forms.ChatForm.resources
+=======
+E:\skole\DND\DnD\bin\Debug\DnD.exe.config
+E:\skole\DND\DnD\bin\Debug\DnD.exe
+E:\skole\DND\DnD\bin\Debug\DnD.pdb
+E:\skole\DND\DnD\obj\Debug\DnD.DMaft.resources
+E:\skole\DND\DnD\obj\Debug\DnD.DMpre.resources
+E:\skole\DND\DnD\obj\Debug\DnD.Forms.ChatForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.PlayerForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.MainForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.CharacterForm.resources
+E:\skole\DND\DnD\obj\Debug\DnD.Properties.Resources.resources
+E:\skole\DND\DnD\obj\Debug\DnD.csproj.GenerateResource.Cache
+E:\skole\DND\DnD\obj\Debug\DnD.exe
+E:\skole\DND\DnD\obj\Debug\DnD.pdb
+>>>>>>> origin/master
