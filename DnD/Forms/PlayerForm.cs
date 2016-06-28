@@ -65,8 +65,6 @@ namespace DnD
 
         private void btnMove_Click(object sender, EventArgs e)
         {
-            //TODO: check if player is able to move where he indicates
-
             //the point where the player goes
             Point point = new Point(10, 10);
 

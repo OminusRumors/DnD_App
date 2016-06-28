@@ -36,6 +36,11 @@ namespace DnD
             string ip = TCPServer.GetIPAddressFromSocket(client);
         }
 
+        public Game Game
+        {
+            get { return this.game; }
+        }
+
         public void clientMessage(Socket client, DnDMessage msg)
         {
             string action = msg.Action;
@@ -81,17 +86,15 @@ namespace DnD
             }
             else if (action == "initilize_player")
             {
-                int[] stats = new int[6];
-                for (int i = 0; i < stats.Length; i++)
+                int[] statsArr = new int[6];
+                for (int i = 0; i < statsArr.Length; i++)
                 {
-                    stats[i] = Convert.ToInt32(msg.Properties[i.ToString()]);
+                    statsArr[i] = Convert.ToInt32(msg.Properties[i.ToString()]);
                 }
-
-                DnDMessage response = DnDMessage.createWithText("hello )");
-                client.Send(response.ToByteArray());
-                //Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
-                // Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
-                //game.AddCharacter(character);
+                Stats stats = new Stats(statsArr[0], statsArr[1], statsArr[2], statsArr[3], statsArr[4], statsArr[5]);
+                Character character = new Character(msg.Properties["name"], stats, Convert.ToInt32(msg.Properties["armor"]),
+                 Convert.ToInt32(msg.Properties["maxHealth"]), Convert.ToInt32(msg.Properties["health"]));
+                game.AddCharacter(character);
             }
             else if (action == "weapon")
             {

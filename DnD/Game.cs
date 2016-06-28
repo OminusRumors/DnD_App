@@ -48,8 +48,8 @@ namespace DnD
         
         public void AddWeapon(Weapon weapon)
         {
-            //Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.Player).Key;
-            //c.CharWeapon = weapon;
+            Character c = charList.FirstOrDefault(t => t.Key.CharName == weapon.Player).Key;
+            c.CharWeapon = weapon;
         }
 
         public Character NextPlayer()
@@ -168,6 +168,7 @@ namespace DnD
         public void UpdateCharPosition(Character character, Point newPosition)
         {
             Character c = charList.First(t => t.Key == character).Key;
+
             charList[c] = newPosition;
         }
         /*
