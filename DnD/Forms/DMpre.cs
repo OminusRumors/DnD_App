@@ -70,7 +70,7 @@ namespace DnD
             pbGameGrid.Click += click;
             Character c = slc.DeSerializeObject<Character>("../Debug/" + lbNPCs.SelectedItem.ToString());
             tempHolder = c;
-
+            
         }
 
         private void btnStartGame_Click(object sender, EventArgs e)

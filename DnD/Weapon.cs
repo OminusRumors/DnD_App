@@ -33,7 +33,7 @@ namespace DnD
         public Dictionary<string, string> ToDictionary()
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("player", player.ToString());
+            //dict.Add("player", player.ToString());
             dict.Add("weapon", wepName);
             dict.Add("attack", weapAttack.ToString());
             dict.Add("range", weapRange.ToString());
